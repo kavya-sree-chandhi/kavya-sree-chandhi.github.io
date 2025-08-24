@@ -394,103 +394,92 @@
       </div>
     </section>
 
-    <!-- PROJECTS (bigger images + richer data) -->
-    <section id="projects" class="py-20 md:py-28 bg-amber-100">
-      <div class="container mx-auto px-6 max-w-6xl">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-14">Projects</h2>
-
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Research Agent -->
-          <article class="project-card bg-white rounded-xl shadow overflow-hidden">
-            <div class="p-6">
-              <h3 class="text-xl font-extrabold mb-2">AI Research Agent for Healthcare Diagnostics</h3>
-              <p class="text-slate-700 mb-4">Python · Streamlit · LangChain · LLaMA3 · FAISS · PyMuPDF &mdash; integrated web/academic/local sources via RAG to produce cited diagnostic reports with multi-format export.</p>
-              <div class="grid grid-cols-2 gap-3">
-                <img src="assets/images/research-agent-1.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/research-agent-2.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/research-agent-3.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/research-agent-4.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-              </div>
-              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
-            </div>
-          </article>
-
-          <!-- Career Copilot -->
-          <article class="project-card bg-white rounded-xl shadow overflow-hidden">
-            <div class="p-6">
-              <h3 class="text-xl font-extrabold mb-2">Career Navigation AI</h3>
-              <p class="text-slate-700 mb-4">LangChain + GPT-4 with Streamlit UI to create personalized AI/ML learning paths, aggregate resources, and improve readiness (measured engagement ↑ ~40%).</p>
-              <div class="grid grid-cols-2 gap-3">
-                <img src="assets/images/career-copilot-1.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/career-copilot-2.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/career-copilot-3.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/career-copilot-4.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-              </div>
-              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
-            </div>
-          </article>
-
-          <!-- Attendance -->
-          <article class="project-card bg-white rounded-xl shadow overflow-hidden">
-            <div class="p-6">
-              <h3 class="text-xl font-extrabold mb-2">Automatic Attendance Monitoring (Face Recognition)</h3>
-              <p class="text-slate-700 mb-4">OpenCV · dlib · Django · SVM/KNN &mdash; embeddings-based attendance system with analytics; eliminated proxy attendance; achieved ~<strong>95%+</strong> accuracy.</p>
-              <div class="grid grid-cols-2 gap-3">
-                <img src="assets/images/attendance-1.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/attendance-2.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/attendance-3.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/attendance-4.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-              </div>
-              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
-            </div>
-          </article>
-
-          <!-- Medical Imaging -->
-          <article class="project-card bg-white rounded-xl shadow overflow-hidden">
-            <div class="p-6">
-              <h3 class="text-xl font-extrabold mb-2">Medical Image Classification (Brain MRI & Chest X-ray)</h3>
-              <p class="text-slate-700 mb-4">CNNs (VGG16/ResNet50) over 10k+ images (~2.7GB). Achieved <strong>98%</strong> accuracy for brain-tumor detection with curated preprocessing and robust evaluation.</p>
-              <div class="grid grid-cols-2 gap-3">
-                <img src="assets/images/medical-imaging-1.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/medical-imaging-2.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/medical-imaging-3.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-                <img src="assets/images/medical-imaging-4.jpg" class="w-full h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
-              </div>
-              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
-            </div>
-          </article>
+   <!-- ACADEMIC PROJECTS -->
+<section id="projects" class="py-20 md:py-28 bg-amber-100">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">Academic Projects</h2>
+    <div class="space-y-16">
+      
+      <!-- Project 1 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Left: Image -->
+        <div>
+          <img src="assets/images/research-agent.jpg" alt="AI Research Agent" class="w-full h-80 object-contain rounded-xl shadow" onerror="this.style.display='none'"/>
+        </div>
+        <!-- Right: Text -->
+        <div>
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">AI Research Agent for Healthcare Diagnostics</h3>
+          <p class="text-slate-700 mb-4">Developed an AI-powered research assistant using Python, Streamlit, LangChain, and LLaMA3, integrating web, academic, and local sources through a RAG pipeline with FAISS and PyMuPDF to generate structured healthcare diagnostics reports with citations and multi-format export.</p>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">🔗 View on GitHub</a>
         </div>
       </div>
-    </section>
 
-    <!-- CERTIFICATES -->
-    <section id="certificates" class="py-20 md:py-28">
-      <div class="container mx-auto px-6 max-w-6xl">
-        <h2 class="text-4xl md:text-52xl font-extrabold text-center mb-10">Certificates</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white rounded-2xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/google.png" alt="Google" class="w-12 h-12 object-contain" onerror="this.style.display='none'"/>
-            <div><p class="font-semibold">Google IT Support Fundamentals</p><p class="text-slate-600 text-sm">Coursera / Google</p></div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/1stop.png" alt="1Stop" class="w-12 h-12 object-contain" onerror="this.style.display='none'"/>
-            <div><p class="font-semibold">Website Development</p><p class="text-slate-600 text-sm">1Stop</p></div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/oracle.png" alt="Oracle" class="w-12 h-12 object-contain" onerror="this.style.display='none'"/>
-            <div><p class="font-semibold">OCI Generative AI Professional</p><p class="text-slate-600 text-sm">Oracle</p></div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/aws.png" alt="AWS" class="w-12 h-12 object-contain" onerror="this.style.display='none'"/>
-            <div><p class="font-semibold">Machine Learning Foundations</p><p class="text-slate-600 text-sm">AWS & Udacity</p></div>
-          </div>
-          <div class="bg-white rounded-2xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/microsoft.png" alt="Microsoft" class="w-12 h-12 object-contain" onerror="this.style.display='none'"/>
-            <div><p class="font-semibold">Fundamentals of Generative AI</p><p class="text-slate-600 text-sm">Microsoft</p></div>
-          </div>
+      <!-- Project 2 (Flipped) -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <!-- Left: Text -->
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">Career Navigation AI</h3>
+          <p class="text-slate-700 mb-4">Built an AI-powered career copilot using LangChain + GPT-4 with a Streamlit UI, generating personalized AI/ML learning paths, aggregating resources, and improving readiness by 40%.</p>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">🔗 View on GitHub</a>
+        </div>
+        <!-- Right: Image -->
+        <div class="order-1 md:order-2">
+          <img src="assets/images/career-ai.jpg" alt="Career Navigation AI" class="w-full h-80 object-contain rounded-xl shadow" onerror="this.style.display='none'"/>
         </div>
       </div>
-    </section>
+
+      <!-- Project 3 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <img src="assets/images/attendance.jpg" alt="Attendance Monitoring" class="w-full h-80 object-contain rounded-xl shadow" onerror="this.style.display='none'"/>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">Automatic Attendance Monitoring System (Face Recognition)</h3>
+          <p class="text-slate-700 mb-4">Developed a face-recognition attendance system using Python, OpenCV, dlib, Django, and ML classifiers (SVM, KNN), achieving 95%+ accuracy, eliminating proxy attendance, and delivering analytics dashboards.</p>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">🔗 View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 4 (Flipped) -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">Image Classification for Disease Detection</h3>
+          <p class="text-slate-700 mb-4">Trained CNNs (VGG16, ResNet50) on 10k+ Brain MRI & Chest X-ray images (~2.7GB). Achieved 98% accuracy for brain tumor detection with VGG16, supported by preprocessing pipelines using OpenCV, NumPy, and Pandas.</p>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">🔗 View on GitHub</a>
+        </div>
+        <div class="order-1 md:order-2">
+          <img src="assets/images/medical-imaging.jpg" alt="Medical Imaging" class="w-full h-80 object-contain rounded-xl shadow" onerror="this.style.display='none'"/>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <img src="assets/images/youth-drug.jpg" alt="Youth Smoking and Drug Analysis" class="w-full h-80 object-contain rounded-xl shadow" onerror="this.style.display='none'"/>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">Youth Smoking and Drug: Analysis & ML Insights</h3>
+          <p class="text-slate-700 mb-4">Analyzed 8,993 youth records using Python, Pandas, NumPy, and Seaborn. Applied EDA, hypothesis testing, and ML, improving high-risk youth identification by 18%, and showing interventions reduced substance use by 12%.</p>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">🔗 View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 6 (Flipped) -->
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="order-2 md:order-1">
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">Securing Data Using Blockchain and AI</h3>
+          <p class="text-slate-700 mb-4">Implemented SecNet architecture with Blockchain-based trusted exchange + AI-powered secure computing. Built Django prototype for healthcare, enabling tamper-proof records, reducing unauthorized access, and improving patient-controlled sharing.</p>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">🔗 View on GitHub</a>
+        </div>
+        <div class="order-1 md:order-2">
+          <img src="assets/images/blockchain-ai.jpg" alt="Blockchain AI Security" class="w-full h-80 object-contain rounded-xl shadow" onerror="this.style.display='none'"/>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- ACADEMICS -->
     <section id="academics" class="py-20 md:py-28 bg-amber-100">
