@@ -11,8 +11,7 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .nav-link.active { color:#2563eb; font-weight:700; }
-    .skill-badge { display:inline-block; background:#fff3; color:#334155; padding:.25rem .75rem; border-radius:9999px; font-size:.875rem; font-weight:500; transition:all .2s; background:#fde68a33; }
-    .skill-badge:hover { background:#2563eb; color:#fff; }
+    .skill-dot { width:10px; height:10px; border-radius:9999px; background:#2563eb; display:inline-block; margin-right:.5rem; }
     .project-card{ transition:transform .25s, box-shadow .25s; }
     .project-card:hover{ transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
     .timeline::before{ content:''; position:absolute; left:50%; transform:translateX(-50%); top:0; bottom:0; width:2px; background:#bfdbfe; }
@@ -40,6 +39,7 @@
         <a href="#projects" class="nav-link text-slate-700 hover:text-blue-600">Projects</a>
         <a href="#certificates" class="nav-link text-slate-700 hover:text-blue-600">Certificates</a>
         <a href="#academics" class="nav-link text-slate-700 hover:text-blue-600">Academics</a>
+        <a href="#contact" class="nav-link text-slate-700 hover:text-blue-600">Contact</a>
       </nav>
       <button id="mobile-menu-button" class="md:hidden text-slate-800" aria-label="Open menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -54,67 +54,81 @@
       <a href="#projects" class="block text-center py-2 px-4 text-sm text-slate-700 hover:bg-blue-50">Projects</a>
       <a href="#certificates" class="block text-center py-2 px-4 text-sm text-slate-700 hover:bg-blue-50">Certificates</a>
       <a href="#academics" class="block text-center py-2 px-4 text-sm text-slate-700 hover:bg-blue-50">Academics</a>
+      <a href="#contact" class="block text-center py-2 px-4 text-sm text-slate-700 hover:bg-blue-50">Contact</a>
     </div>
   </header>
 
   <main>
-    <!-- Home -->
+    <!-- Home (no phone/location) -->
     <section id="home" class="min-h-screen flex items-center bg-gradient-to-b from-amber-50 to-amber-100">
       <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4">Kavya Sree Chandhi</h1>
         <h2 class="text-2xl md:text-3xl font-semibold text-blue-700 mb-6">Generative AI Engineer</h2>
-        <p class="max-w-3xl mx-auto text-lg text-slate-700 mb-8">GenAI / LLM specialist with 3+ years across AI, ML, and Data Engineering. I build RAG systems, fine‑tune models, and ship cloud‑native AI apps that deliver measurable impact.</p>
-        <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <p class="max-w-3xl mx-auto text-lg text-slate-700 mb-8">I build production‑ready GenAI systems—RAG, fine‑tuning, and AI agents—on AWS/Azure/GCP. My focus: measurable impact (latency, accuracy, cost) and shipping complete experiences end‑to‑end.</p>
+        <div class="flex flex-wrap justify-center gap-3 mb-2">
           <a href="mailto:Kavyasreechandhi@gmail.com" class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:bg-blue-700"><span class="text-xl">✉️</span> Email</a>
           <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">LinkedIn</a>
           <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">GitHub</a>
           <a href="./resume.pdf" download class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50" title="Place resume.pdf in the repo root">Download Resume</a>
         </div>
-        <p class="text-sm text-slate-600">Herriman, Utah 84096 · +1 940‑629‑8898</p>
       </div>
     </section>
 
-    <!-- About -->
+    <!-- About (brief summary from resume) -->
     <section id="about" class="py-20 md:py-28">
       <div class="container mx-auto px-6 max-w-5xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">About Me</h2>
         <div class="text-lg text-slate-700 leading-relaxed space-y-5">
-          <p>I design and deploy production‑ready Generative AI systems—LLM apps, RAG pipelines, and evaluation workflows—using Python, LangChain/LangGraph, and cloud platforms (AWS, Azure, GCP). My background spans NLP, computer vision, and classic ML, with frontend skills to ship complete experiences.</p>
-          <p>Recently, I built a Contract Intelligence platform that cut legal review time by <strong>45%</strong> using GPT‑4, custom RAG, and Azure‑scale deployment. I prioritize safety, guardrails, and metrics: latency, accuracy, and cost.</p>
+          <p>Generative AI Engineer with 3+ years across AI/ML/Data Engineering, including 1+ year deep in LLMs, RAG, fine‑tuning, and cloud deployments. I’ve delivered AI solutions like a 95%+ face‑recognition attendance system, dynamic chatbots, and real‑time analytics in healthcare, finance, and retail.</p>
+          <p>Skilled in Python, FastAPI/Flask, and automation; experienced across NLP, CV, and deep learning for classification, summarization, and detection. Comfortable on AWS (SageMaker/Bedrock), Azure (Prompt Flow/Bot Framework/Cosmos DB), and GCP (Vertex/BigQuery ML). Passionate about building safe, cloud‑native GenAI that drives business impact.</p>
         </div>
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Experience (expanded + logos) -->
     <section id="experience" class="py-20 md:py-28 bg-amber-100">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">Professional Experience</h2>
-        <div class="relative max-w-4xl mx-auto flex flex-col timeline">
+        <div class="relative max-w-5xl mx-auto flex flex-col timeline">
+          <!-- UnitedHealthcare -->
           <div class="timeline-item mb-12">
             <div class="timeline-dot"></div>
             <div class="bg-white p-6 rounded-lg shadow-md">
-              <h3 class="text-xl font-bold">Generative AI Engineer</h3>
-              <p class="text-blue-700 font-semibold mb-1">UnitedHealthcare</p>
-              <p class="text-sm text-slate-500 mb-4">Minnetonka, MN · Jul 2024 – Present</p>
+              <div class="flex items-start gap-4 mb-2">
+                <img src="/logos/unitedhealthcare.png" alt="UnitedHealthcare" class="w-10 h-10 rounded object-contain" />
+                <div>
+                  <h3 class="text-xl font-bold">Generative AI Engineer</h3>
+                  <p class="text-blue-700 font-semibold">UnitedHealthcare · Minnetonka, MN</p>
+                  <p class="text-sm text-slate-500">Jul 2024 – Present</p>
+                </div>
+              </div>
               <ul class="list-disc list-inside text-slate-700 space-y-2">
-                <li>Shipped a GPT‑4 + LangChain Contract Intelligence platform with RAG (Pinecone/FAISS), cutting review time <strong>45%</strong> and improving compliance accuracy <strong>30%</strong>.</li>
-                <li>Fine‑tuned domain models and added clause‑risk comparison; introduced guardrails and bias checks for legally compliant outputs.</li>
-                <li>Deployed on Azure AKS with Dockerized microservices and Cosmos DB; achieved <strong>99.9%</strong> uptime and enterprise scalability.</li>
-                <li>Built Power BI + Streamlit dashboards and DocuSign API flows to monitor risk and accelerate approvals.</li>
+                <li>Built a GPT‑4 + LangChain Contract Intelligence platform with RAG (Pinecone/FAISS) → review time −<strong>45%</strong>, compliance accuracy +<strong>30%</strong>.</li>
+                <li>Fine‑tuned domain models; added clause‑risk comparison and guardrails/bias checks for legally consistent outputs.</li>
+                <li>Deployed on Azure AKS (Dockerized microservices) + Cosmos DB; achieved <strong>99.9%</strong> uptime and horizontal scalability.</li>
+                <li>Power BI + Streamlit dashboards; DocuSign API integration streamlined contract lifecycle (admin delays −<strong>30%</strong>).</li>
+                <li>Led A/B evaluations with legal teams; standardized prompts and evaluation harnesses (latency/accuracy/cost).</li>
               </ul>
             </div>
           </div>
+          <!-- USAA / TCS -->
           <div class="timeline-item mb-12">
             <div class="timeline-dot"></div>
             <div class="bg-white p-6 rounded-lg shadow-md">
-              <h3 class="text-xl font-bold">AI/ML Engineer</h3>
-              <p class="text-blue-700 font-semibold mb-1">USAA (via TCS), USA / India</p>
-              <p class="text-sm text-slate-500 mb-4">Aug 2021 – Nov 2022</p>
+              <div class="flex items-start gap-4 mb-2">
+                <img src="/logos/usaa.png" alt="USAA" class="w-10 h-10 rounded object-contain" />
+                <div>
+                  <h3 class="text-xl font-bold">AI/ML Engineer</h3>
+                  <p class="text-blue-700 font-semibold">USAA (via TCS) · USA / India</p>
+                  <p class="text-sm text-slate-500">Aug 2021 – Nov 2022</p>
+                </div>
+              </div>
               <ul class="list-disc list-inside text-slate-700 space-y-2">
-                <li>Built time‑series forecasting (LSTM/ARIMA) for 500+ SKUs; improved demand accuracy <strong>22%</strong> and reduced stockouts <strong>19%</strong>.</li>
-                <li>Processed TB‑scale datasets with Spark on EMR; automated pipelines with Airflow, Redshift, and S3 (‑40% manual ops).</li>
-                <li>Served models via SageMaker APIs; delivered replenishment recommendations and Grafana/Tableau live KPIs.</li>
-                <li>Containerized services on Kubernetes for scale and reliability in production environments.</li>
+                <li>Time‑series forecasting (LSTM/ARIMA) for 500+ SKUs → demand accuracy +<strong>22%</strong>, stockouts −<strong>19%</strong>.</li>
+                <li>Processed TB‑scale data with Spark/EMR; automated pipelines (Airflow, Redshift, S3) → manual ops −<strong>40%</strong>.</li>
+                <li>Deployed models via SageMaker REST APIs; integrated with enterprise systems for replenishment recommendations.</li>
+                <li>Live KPIs via Tableau/Grafana; anomaly detection caught promo‑driven spikes earlier.</li>
+                <li>Containerized services on Kubernetes; improved reliability and deployment cadence.</li>
               </ul>
             </div>
           </div>
@@ -122,192 +136,253 @@
       </div>
     </section>
 
-    <!-- Volunteering -->
+    <!-- Volunteering (expanded + logos) -->
     <section id="volunteering" class="py-20 md:py-28">
       <div class="container mx-auto px-6 max-w-5xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Volunteering Experience</h2>
         <div class="bg-white rounded-lg shadow-md p-6">
-          <h3 class="text-xl font-bold">Frontend Developer (Volunteer)</h3>
-          <p class="text-blue-700 font-semibold mb-1">NTARI – LogicLingo</p>
-          <p class="text-sm text-slate-500 mb-4">Jun 2025 – Aug 2025</p>
+          <div class="flex items-start gap-4 mb-2">
+            <img src="/logos/ntari.png" alt="NTARI" class="w-10 h-10 rounded object-contain" />
+            <div>
+              <h3 class="text-xl font-bold">Frontend Developer (Volunteer)</h3>
+              <p class="text-blue-700 font-semibold">NTARI – LogicLingo</p>
+              <p class="text-sm text-slate-500">Jun 2025 – Aug 2025</p>
+            </div>
+          </div>
           <ul class="list-disc list-inside text-slate-700 space-y-2">
-            <li>Built responsive UI components; reduced duplicate code <strong>30%</strong>.</li>
-            <li>Integrated backend APIs for real‑time features; navigation speed +<strong>20%</strong>, load time −<strong>35%</strong>.</li>
-            <li>Implemented WCAG 2.1 accessibility; authored documentation; delivered reliably in Agile sprints.</li>
+            <li>Designed responsive UI and reusable components (HTML/CSS/JS) → duplicate code −<strong>30%</strong>.</li>
+            <li>Integrated backend APIs; navigation efficiency +<strong>20%</strong>, page load −<strong>35%</strong>.</li>
+            <li>Implemented WCAG 2.1 accessibility; authored docs; ensured 100% on‑time sprint delivery.</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="py-20 md:py-28 bg-amber-100">
+    <!-- NGO / Leadership -->
+    <section id="ngo" class="py-20 md:py-28 bg-amber-100">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Leadership & NGO</h2>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-start gap-4 mb-2">
+            <img src="/logos/street-cause-swec.png" alt="Street Cause SWEC" class="w-10 h-10 rounded object-contain" />
+            <div>
+              <h3 class="text-xl font-bold">Associate President – Street Cause SWEC</h3>
+              <p class="text-blue-700 font-semibold">Student NGO Initiative</p>
+              <p class="text-sm text-slate-500">Year(s): Add here</p>
+            </div>
+          </div>
+          <ul class="list-disc list-inside text-slate-700 space-y-2">
+            <li>Led campus‑wide social impact drives and fundraising campaigns; coordinated volunteers and logistics.</li>
+            <li>Owned planning, stakeholder outreach, and reporting; improved event participation and transparency.</li>
+            <li>Collaborated with local partners to deliver measurable community outcomes.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills (new format: compact lists with icons) -->
+    <section id="skills" class="py-20 md:py-28">
       <div class="container mx-auto px-6 max-w-6xl">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">Technical Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold mb-4 text-blue-700">Programming & Languages</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge">Python</span><span class="skill-badge">C</span><span class="skill-badge">JavaScript</span><span class="skill-badge">TypeScript</span><span class="skill-badge">HTML</span><span class="skill-badge">CSS</span><span class="skill-badge">SQL</span><span class="skill-badge">Bash</span><span class="skill-badge">Linux</span>
-            </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-bold text-blue-700 mb-3 flex items-center gap-2"><img src="/logos/python.png" class="w-5 h-5" alt=""/> Programming</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li><span class="skill-dot"></span>Python, TypeScript/JavaScript, C, Bash, SQL</li>
+              <li><span class="skill-dot"></span>Web: HTML/CSS, FastAPI, Flask, Django, Streamlit</li>
+              <li><span class="skill-dot"></span>APIs, Testing, Automation</li>
+            </ul>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold mb-4 text-blue-700">Generative AI</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge">LLMs</span><span class="skill-badge">Transformers</span><span class="skill-badge">RAG</span><span class="skill-badge">Prompt Eng.</span><span class="skill-badge">Fine‑tuning</span><span class="skill-badge">Agents</span><span class="skill-badge">Milvus</span><span class="skill-badge">ChromaDB</span><span class="skill-badge">LangChain</span><span class="skill-badge">Hugging Face</span><span class="skill-badge">Ollama</span><span class="skill-badge">Groq</span><span class="skill-badge">OpenAI</span><span class="skill-badge">DALL·E</span>
-            </div>
+          <div>
+            <h3 class="text-lg font-bold text-blue-700 mb-3 flex items-center gap-2"><img src="/logos/llm.png" class="w-5 h-5" alt=""/> Generative AI</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li><span class="skill-dot"></span>LLMs, Transformers, Prompt Eng., Fine‑tuning</li>
+              <li><span class="skill-dot"></span>RAG (Milvus/Chroma, FAISS), Agents</li>
+              <li><span class="skill-dot"></span>LangChain, Hugging Face, OpenAI, Groq, Ollama, DALL·E</li>
+            </ul>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold mb-4 text-blue-700">ML / DS</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge">Supervised/Unsupervised</span><span class="skill-badge">Feature Eng.</span><span class="skill-badge">Cross‑Validation</span><span class="skill-badge">scikit‑learn</span><span class="skill-badge">Stats</span>
-            </div>
+          <div>
+            <h3 class="text-lg font-bold text-blue-700 mb-3 flex items-center gap-2"><img src="/logos/ml.png" class="w-5 h-5" alt=""/> ML & Data Science</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li><span class="skill-dot"></span>Supervised/Unsupervised, Feature Eng., CV/Hyper‑param</li>
+              <li><span class="skill-dot"></span>scikit‑learn, Stats, EDA, Predictive Modeling</li>
+              <li><span class="skill-dot"></span>Visualization: Power BI, Tableau, Grafana, Matplotlib, Seaborn</li>
+            </ul>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold mb-4 text-blue-700">Deep Learning & CV</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge">PyTorch</span><span class="skill-badge">TensorFlow</span><span class="skill-badge">Keras</span><span class="skill-badge">CNN</span><span class="skill-badge">ResNet</span><span class="skill-badge">MobileNet</span><span class="skill-badge">OpenCV</span>
-            </div>
+          <div>
+            <h3 class="text-lg font-bold text-blue-700 mb-3 flex items-center gap-2"><img src="/logos/dl.png" class="w-5 h-5" alt=""/> Deep Learning & CV</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li><span class="skill-dot"></span>PyTorch, TensorFlow, Keras</li>
+              <li><span class="skill-dot"></span>CNNs (ResNet, MobileNet), Transfer Learning</li>
+              <li><span class="skill-dot"></span>OpenCV, Object Detection, Image Classification</li>
+            </ul>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold mb-4 text-blue-700">Cloud & MLOps</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge">AWS (Bedrock, SageMaker, Lambda, EC2, S3, Redshift)</span>
-              <span class="skill-badge">Azure (Prompt Flow, Cosmos DB, Bot Framework)</span>
-              <span class="skill-badge">GCP (Vertex AI, BigQuery ML, Pub/Sub)</span>
-              <span class="skill-badge">Docker</span><span class="skill-badge">Kubernetes</span><span class="skill-badge">CI/CD</span><span class="skill-badge">Kafka</span><span class="skill-badge">Airflow</span>
-            </div>
+          <div>
+            <h3 class="text-lg font-bold text-blue-700 mb-3 flex items-center gap-2"><img src="/logos/cloud.png" class="w-5 h-5" alt=""/> Cloud & MLOps</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li><span class="skill-dot"></span>AWS (Bedrock, SageMaker, Lambda, EC2, S3, Redshift)</li>
+              <li><span class="skill-dot"></span>Azure (Prompt Flow, Cosmos DB, Bot Framework)</li>
+              <li><span class="skill-dot"></span>GCP (Vertex AI, BigQuery ML, Pub/Sub)</li>
+              <li><span class="skill-dot"></span>Docker, Kubernetes, CI/CD, Kafka, Airflow</li>
+            </ul>
           </div>
-          <div class="bg-white p-6 rounded-lg shadow-sm">
-            <h3 class="text-xl font-bold mb-4 text-blue-700">Data & Visualization</h3>
-            <div class="flex flex-wrap gap-2">
-              <span class="skill-badge">SQL</span><span class="skill-badge">PostgreSQL</span><span class="skill-badge">MongoDB</span><span class="skill-badge">DynamoDB</span>
-              <span class="skill-badge">Power BI</span><span class="skill-badge">Tableau</span><span class="skill-badge">Grafana</span><span class="skill-badge">Matplotlib</span><span class="skill-badge">Seaborn</span>
-            </div>
+          <div>
+            <h3 class="text-lg font-bold text-blue-700 mb-3 flex items-center gap-2"><img src="/logos/db.png" class="w-5 h-5" alt=""/> Data & Databases</h3>
+            <ul class="space-y-2 text-slate-700">
+              <li><span class="skill-dot"></span>SQL, PostgreSQL, MySQL, MongoDB, DynamoDB</li>
+              <li><span class="skill-dot"></span>Elasticsearch, NoSQL; ETL/ELT best practices</li>
+              <li><span class="skill-dot"></span>Power BI, Tableau, Grafana dashboards</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-20 md:py-28">
+    <!-- Projects (with 4‑image gallery per project) -->
+    <section id="projects" class="py-20 md:py-28 bg-amber-100">
       <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">Projects</h2>
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="project-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-            <div class="p-6 flex-grow">
+          <!-- Project template: add 4 images under /assets/projects/<slug>/{1..4}.jpg -->
+          <article class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6">
               <h3 class="text-xl font-bold mb-2">AI Research Agent for Healthcare Diagnostics</h3>
-              <p class="text-slate-700 mb-4">Python + Streamlit + LangChain + LLaMA3 with web/arXiv/PubMed + local docs RAG (FAISS, PyMuPDF). Produces cited, structured reports.</p>
-              <div class="flex flex-wrap gap-2 mb-4"><span class="skill-badge">LangChain</span><span class="skill-badge">LLaMA3</span><span class="skill-badge">RAG</span><span class="skill-badge">FAISS</span><span class="skill-badge">Streamlit</span></div>
+              <p class="text-slate-700 mb-4">Python + Streamlit + LangChain + LLaMA3; RAG over web/arXiv/PubMed/local docs (FAISS, PyMuPDF). Outputs cited, structured reports.</p>
+              <div class="grid grid-cols-2 gap-2">
+                <img src="/assets/projects/research-agent/1.jpg" alt="Research Agent screenshot 1" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/research-agent/2.jpg" alt="Research Agent screenshot 2" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/research-agent/3.jpg" alt="Research Agent screenshot 3" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/research-agent/4.jpg" alt="Research Agent screenshot 4" class="w-full h-36 object-cover rounded"/>
+              </div>
+              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
             </div>
-            <div class="p-6 bg-blue-50 border-t border-blue-100"><a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">View on GitHub →</a></div>
-          </div>
-          <div class="project-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-            <div class="p-6 flex-grow">
+          </article>
+
+          <article class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Career Navigation AI</h3>
-              <p class="text-slate-700 mb-4">Copilot that builds personalized AI/ML learning paths using LangChain + GPT‑4; aggregates resources and improves career readiness (~40%).</p>
-              <div class="flex flex-wrap gap-2 mb-4"><span class="skill-badge">LangChain</span><span class="skill-badge">GPT‑4</span><span class="skill-badge">Streamlit</span><span class="skill-badge">RAG</span></div>
+              <p class="text-slate-700 mb-4">Copilot creating personalized AI/ML learning paths (LangChain + GPT‑4) with aggregated resources; improved career readiness.</p>
+              <div class="grid grid-cols-2 gap-2">
+                <img src="/assets/projects/career-copilot/1.jpg" alt="Career Copilot 1" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/career-copilot/2.jpg" alt="Career Copilot 2" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/career-copilot/3.jpg" alt="Career Copilot 3" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/career-copilot/4.jpg" alt="Career Copilot 4" class="w-full h-36 object-cover rounded"/>
+              </div>
+              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
             </div>
-            <div class="p-6 bg-blue-50 border-t border-blue-100"><a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">View on GitHub →</a></div>
-          </div>
-          <div class="project-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-            <div class="p-6 flex-grow">
+          </article>
+
+          <article class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Automatic Attendance Monitoring (Face Recognition)</h3>
               <p class="text-slate-700 mb-4">OpenCV + dlib + Django; embeddings + SVM/KNN; analytics dashboard. Eliminated proxy attendance; ~95%+ accuracy.</p>
-              <div class="flex flex-wrap gap-2 mb-4"><span class="skill-badge">OpenCV</span><span class="skill-badge">Django</span><span class="skill-badge">SVM</span><span class="skill-badge">KNN</span></div>
+              <div class="grid grid-cols-2 gap-2">
+                <img src="/assets/projects/attendance/1.jpg" alt="Attendance 1" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/attendance/2.jpg" alt="Attendance 2" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/attendance/3.jpg" alt="Attendance 3" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/attendance/4.jpg" alt="Attendance 4" class="w-full h-36 object-cover rounded"/>
+              </div>
+              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
             </div>
-            <div class="p-6 bg-blue-50 border-t border-blue-100"><a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">View on GitHub →</a></div>
-          </div>
-          <div class="project-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-            <div class="p-6 flex-grow">
+          </article>
+
+          <article class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-6">
               <h3 class="text-xl font-bold mb-2">Medical Image Classification (Brain MRI & Chest X‑ray)</h3>
-              <p class="text-slate-700 mb-4">CNNs with VGG16/ResNet50; 10k+ images (~2.7GB). 98% brain‑tumor detection accuracy using careful preprocessing & augmentation.</p>
-              <div class="flex flex-wrap gap-2 mb-4"><span class="skill-badge">PyTorch</span><span class="skill-badge">TensorFlow</span><span class="skill-badge">Keras</span><span class="skill-badge">OpenCV</span></div>
+              <p class="text-slate-700 mb-4">CNNs (VGG16/ResNet50) over 10k+ images (~2.7GB). 98% brain‑tumor detection accuracy with curated preprocessing.</p>
+              <div class="grid grid-cols-2 gap-2">
+                <img src="/assets/projects/medical-imaging/1.jpg" alt="Medical Imaging 1" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/medical-imaging/2.jpg" alt="Medical Imaging 2" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/medical-imaging/3.jpg" alt="Medical Imaging 3" class="w-full h-36 object-cover rounded"/>
+                <img src="/assets/projects/medical-imaging/4.jpg" alt="Medical Imaging 4" class="w-full h-36 object-cover rounded"/>
+              </div>
+              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
             </div>
-            <div class="p-6 bg-blue-50 border-t border-blue-100"><a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">View on GitHub →</a></div>
-          </div>
-          <div class="project-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-            <div class="p-6 flex-grow">
-              <h3 class="text-xl font-bold mb-2">Youth Smoking & Drug – Analysis & ML Insights</h3>
-              <p class="text-slate-700 mb-4">EDA, hypothesis tests, and ML on 8,993 records. Found peer‑influence effects (+20% smoking) and school interventions (‑12%).</p>
-              <div class="flex flex-wrap gap-2 mb-4"><span class="skill-badge">Pandas</span><span class="skill-badge">NumPy</span><span class="skill-badge">Seaborn</span><span class="skill-badge">scikit‑learn</span></div>
-            </div>
-            <div class="p-6 bg-blue-50 border-t border-blue-100"><a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">View on GitHub →</a></div>
-          </div>
-          <div class="project-card bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
-            <div class="p-6 flex-grow">
-              <h3 class="text-xl font-bold mb-2">Securing Data with Blockchain + AI (SecNet)</h3>
-              <p class="text-slate-700 mb-4">Patient‑controlled access and tamper‑proof audit via blockchain; Django prototype with AI‑assisted checks for medical records.</p>
-              <div class="flex flex-wrap gap-2 mb-4"><span class="skill-badge">Django</span><span class="skill-badge">Blockchain</span><span class="skill-badge">Python</span></div>
-            </div>
-            <div class="p-6 bg-blue-50 border-t border-blue-100"><a href="https://github.com/kavya-sree-chandhi" target="_blank" class="font-semibold text-blue-700 hover:underline">View on GitHub →</a></div>
-          </div>
+          </article>
         </div>
+        <p class="text-center text-sm text-slate-600 mt-6">Place images under <code>/assets/projects/&lt;project-slug&gt;/1.jpg…4.jpg</code>. Any format (jpg/png/webp) works.</p>
       </div>
     </section>
 
-    <!-- Certificates (with issuer logos) -->
-    <section id="certificates" class="py-20 md:py-28 bg-amber-100">
+    <!-- Certificates (official logos) -->
+    <section id="certificates" class="py-20 md:py-28">
       <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Certificates</h2>
-        <p class="text-center text-slate-600 mb-8">A selection of credentials. Logos are lightweight inline SVGs; replace with official images if desired.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Google IT Support Fundamentals -->
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <div class="shrink-0 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">G</div>
+            <img src="/logos/google.png" alt="Google" class="w-12 h-12 rounded object-contain"/>
             <div>
               <p class="font-semibold">Google IT Support Fundamentals</p>
               <p class="text-slate-600 text-sm">Coursera / Google</p>
             </div>
           </div>
-          <!-- Website Development – 1Stop -->
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <div class="shrink-0 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold">1S</div>
+            <img src="/logos/1stop.png" alt="1Stop" class="w-12 h-12 rounded object-contain"/>
             <div>
               <p class="font-semibold">Website Development</p>
               <p class="text-slate-600 text-sm">1Stop</p>
             </div>
           </div>
-          <!-- Oracle OCI GenAI Professional -->
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <div class="shrink-0 w-12 h-12 rounded-full bg-red-600 flex items-center justify-center text-white font-bold">OR</div>
+            <img src="/logos/oracle.png" alt="Oracle" class="w-12 h-12 rounded object-contain"/>
             <div>
               <p class="font-semibold">OCI Generative AI Professional</p>
               <p class="text-slate-600 text-sm">Oracle</p>
             </div>
           </div>
-          <!-- AWS ML Foundations -->
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <div class="shrink-0 w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">AWS</div>
+            <img src="/logos/aws.png" alt="AWS" class="w-12 h-12 rounded object-contain"/>
             <div>
               <p class="font-semibold">Machine Learning Foundations</p>
               <p class="text-slate-600 text-sm">AWS & Udacity</p>
             </div>
           </div>
-          <!-- Microsoft Fundamentals of GenAI -->
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <div class="shrink-0 w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center text-white font-bold">MS</div>
+            <img src="/logos/microsoft.png" alt="Microsoft" class="w-12 h-12 rounded object-contain"/>
             <div>
               <p class="font-semibold">Fundamentals of Generative AI</p>
               <p class="text-slate-600 text-sm">Microsoft</p>
             </div>
           </div>
         </div>
-        <p class="text-center text-sm text-slate-500 mt-6">Tip: To use official logos, swap the colored circles for <code>&lt;img src="/logos/issuer.png" alt="Issuer" class="w-12 h-12 rounded-full object-contain" /&gt;</code>.</p>
+        <p class="text-center text-sm text-slate-600 mt-6">Put official logo images under <code>/logos/</code> with the same names or update the paths above.</p>
       </div>
     </section>
 
-    <!-- Academics -->
-    <section id="academics" class="py-20 md:py-28">
-      <div class="container mx-auto px-6 max-w-5xl">
+    <!-- Academics (with UNT logo + image) -->
+    <section id="academics" class="py-20 md:py-28 bg-amber-100">
+      <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Academics</h2>
-        <div class="bg-white rounded-lg shadow p-6">
-          <h3 class="text-xl font-bold">Master of Science in Computer Science <span class="text-slate-500 font-semibold">— GPA: 3.916/4</span></h3>
-          <p class="text-slate-700">University of North Texas – Denton, Texas</p>
-          <ul class="list-disc list-inside text-slate-700 mt-3 space-y-1">
-            <li>Specializations: AI, ML, Software Engineering; projects in Generative AI, NLP, and Deep Learning.</li>
-            <li>Stack applied: Python, Java, TensorFlow, LangChain, databases.</li>
-            <li>Built and deployed scalable applications via Agile and hackathons.</li>
-          </ul>
+        <div class="grid md:grid-cols-3 gap-6 items-stretch">
+          <div class="bg-white rounded-lg shadow p-6 md:col-span-2 flex flex-col">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="/logos/unt.png" alt="University of North Texas" class="w-8 h-8 object-contain"/>
+              <h3 class="text-xl font-bold">Master of Science in Computer Science <span class="text-slate-500 font-semibold">— GPA: 3.916/4</span></h3>
+            </div>
+            <p class="text-slate-700">University of North Texas – Denton, Texas</p>
+            <ul class="list-disc list-inside text-slate-700 mt-3 space-y-1">
+              <li>Specializations: AI, ML, Software Engineering; hands‑on projects in Generative AI, NLP, and Deep Learning.</li>
+              <li>Stack applied: Python, Java, TensorFlow, LangChain, modern databases.</li>
+              <li>Built and deployed scalable applications via Agile and hackathons.</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg shadow overflow-hidden">
+            <img src="/assets/academics/unt-campus.jpg" alt="UNT campus" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <p class="text-center text-sm text-slate-600 mt-4">Place your campus image at <code>/assets/academics/unt-campus.jpg</code>. Any size; will crop to fit.</p>
+      </div>
+    </section>
+
+    <!-- Contact (separate section) -->
+    <section id="contact" class="py-20 md:py-24">
+      <div class="container mx-auto px-6 max-w-3xl text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Me</h2>
+        <p class="text-slate-700 mb-8">Open to Generative AI / LLM roles and collaborations. Reach out below.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+          <a href="mailto:Kavyasreechandhi@gmail.com" class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:bg-blue-700"><span class="text-xl">✉️</span> Kavyasreechandhi@gmail.com</a>
+          <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">LinkedIn</a>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">GitHub</a>
         </div>
       </div>
     </section>
