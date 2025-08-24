@@ -11,7 +11,6 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
     .nav-link.active { color:#2563eb; font-weight:700; }
-    .skill-dot { width:10px; height:10px; border-radius:9999px; background:#2563eb; display:inline-block; margin-right:.5rem; }
     .project-card{ transition:transform .25s, box-shadow .25s; }
     .project-card:hover{ transform:translateY(-4px); box-shadow:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1); }
     .timeline::before{ content:''; position:absolute; left:50%; transform:translateX(-50%); top:0; bottom:0; width:2px; background:#bfdbfe; }
@@ -43,7 +42,7 @@
         <a href="#contact" class="nav-link text-slate-700 hover:text-blue-600">Contact</a>
       </nav>
       <button id="mobile-menu-button" class="md:hidden text-slate-800" aria-label="Open menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
       </button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden border-t border-amber-200 bg-amber-50/95">
@@ -61,7 +60,7 @@
   </header>
 
   <main>
-    <!-- Home (no phone/location) -->
+    <!-- HOME (no duplicate CTAs) -->
     <section id="home" class="min-h-screen flex items-center bg-gradient-to-b from-amber-50 to-amber-100">
       <div class="container mx-auto px-6 text-center">
         <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4">Kavya Sree Chandhi</h1>
@@ -75,27 +74,17 @@
         </div>
       </div>
     </section>
-        <div class="flex flex-wrap justify-center gap-3 mb-2">
-          <a href="mailto:Kavyasreechandhi@gmail.com" class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:bg-blue-700"><span class="text-xl">✉️</span> Email</a>
-          <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">LinkedIn</a>
-          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">GitHub</a>
-          <a href="./resume.pdf" download class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50" title="Place resume.pdf in the repo root">Download Resume</a>
-        </div>
-      </div>
-    </section>
 
-    <!-- About (brief summary from resume) -->
+    <!-- ABOUT -->
     <section id="about" class="py-20 md:py-28">
       <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">About Me</h2>
         <div class="grid md:grid-cols-5 gap-10 items-center">
-          <!-- Portrait on the left (tall / inverted-rectangle vibe) -->
           <div class="md:col-span-2">
             <div class="relative w-full max-w-sm mx-auto">
-              <img src="assets/images/profile.jpg" alt="Kavya Sree Chandhi" class="w-full aspect-[3/4] object-cover rounded-[28px] -rotate-2 shadow-2xl ring-4 ring-blue-600/10 bg-white"/>
+              <img src="assets/images/profile.jpg" alt="Kavya Sree Chandhi" class="w-full aspect-[3/4] object-cover rounded-[28px] -rotate-2 shadow-2xl ring-4 ring-blue-600/10 bg-white" onerror="this.style.display='none'"/>
             </div>
           </div>
-          <!-- Summary on the right -->
           <div class="md:col-span-3 text-lg text-slate-700 leading-relaxed space-y-5">
             <p>Generative AI Engineer with <strong>3+ years</strong> across AI, ML, and data engineering. I design and deploy LLM‑powered solutions—<strong>RAG</strong>, <strong>fine‑tuning</strong>, and <strong>agents</strong>—for real‑world use. Highlights: built a Contract Intelligence platform at UnitedHealthcare that cut review time by <strong>45%</strong> and improved compliance accuracy by <strong>30%</strong>; delivered demand‑forecasting and inventory optimization that lifted forecast accuracy by <strong>22%</strong> and reduced stockouts by <strong>19%</strong>; and created a face‑recognition attendance system with <strong>95%+</strong> accuracy.</p>
             <p>Hands‑on with <strong>Python</strong>, <strong>FastAPI/Flask</strong>, <strong>LangChain</strong>, <strong>Hugging Face</strong>, vector search (<strong>FAISS/Chroma/Milvus</strong>), and SQL. Cloud experience spans <strong>AWS</strong> (Bedrock, SageMaker, Lambda, S3, Redshift), <strong>Azure</strong> (Prompt Flow, Cosmos DB, AKS), and <strong>GCP</strong> (Vertex AI, BigQuery ML, Pub/Sub). I practice <strong>MLOps</strong> with Docker, Kubernetes, CI/CD, Kafka, and Airflow; and I use <strong>Power BI/Tableau/Grafana</strong> to make outcomes visible. I care about measurable impact—<em>latency, accuracy, cost</em>—and shipping end‑to‑end, production‑ready systems.</p>
@@ -104,17 +93,16 @@
       </div>
     </section>
 
-    <!-- Experience (expanded + logos) -->
+    <!-- EXPERIENCE -->
     <section id="experience" class="py-20 md:py-28 bg-amber-100">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">Professional Experience</h2>
         <div class="relative max-w-5xl mx-auto flex flex-col timeline">
-          <!-- UnitedHealthcare -->
           <div class="timeline-item mb-12">
             <div class="timeline-dot"></div>
             <div class="bg-white p-6 rounded-lg shadow-md">
               <div class="flex items-start gap-4 mb-2">
-                <img src="assets/images/unitedhealthcare.png" alt="UnitedHealthcare" class="w-10 h-10 rounded object-contain" />
+                <img src="assets/images/unitedhealthcare.png" alt="UnitedHealthcare" class="w-10 h-10 rounded object-contain" onerror="this.style.display='none'"/>
                 <div>
                   <h3 class="text-xl font-bold">Generative AI Engineer</h3>
                   <p class="text-blue-700 font-semibold">UnitedHealthcare · Minnetonka, MN</p>
@@ -126,7 +114,7 @@
                 <li>Built semantic search/retrieval across millions of docs; tuned embedding models and ranking to improve retrieval precision by <strong>25%</strong>.</li>
                 <li>Fine‑tuned GPT‑3.5/4 on compliance/regulatory datasets to reduce context errors and boost domain accuracy; implemented clause‑risk comparison to automatically flag risky/missing terms (manual review time −<strong>20%</strong>).</li>
                 <li>Integrated <strong>Azure Cosmos DB</strong> for secure document storage/query; ensured scalability and regulatory compliance.</li>
-                <li>Containerized microservices and deployed on <strong>Azure Kubernetes Service</strong> (AKS) with Docker; achieved <strong>99.9%</strong> uptime, horizontal scaling, and robust monitoring.</li>
+                <li>Containerized microservices and deployed on <strong>Azure Kubernetes Service</strong> (AKS) with Docker; achieved <strong>99.9%</strong> uptime.</li>
                 <li>Applied prompt‑engineering strategies with <strong>guardrails</strong> and bias detection for standardized, legally compliant outputs.</li>
                 <li>Built <strong>Power BI</strong> and <strong>Streamlit</strong> dashboards for real‑time visibility into contract risks, approval timelines, and compliance metrics.</li>
                 <li>Integrated with <strong>DocuSign</strong> APIs to streamline lifecycle and approvals — administrative delays −<strong>30%</strong>.</li>
@@ -136,12 +124,11 @@
             </div>
           </div>
 
-          <!-- USAA / TCS -->
           <div class="timeline-item mb-12">
             <div class="timeline-dot"></div>
             <div class="bg-white p-6 rounded-lg shadow-md">
               <div class="flex items-start gap-4 mb-2">
-                <img src="assets/images/usaa.png" alt="USAA" class="w-10 h-10 rounded object-contain" />
+                <img src="assets/images/usaa.png" alt="USAA" class="w-10 h-10 rounded object-contain" onerror="this.style.display='none'"/>
                 <div>
                   <h3 class="text-xl font-bold">AI/ML Engineer</h3>
                   <p class="text-blue-700 font-semibold">USAA (via TCS) · USA / India</p>
@@ -150,15 +137,14 @@
               </div>
               <ul class="list-disc list-inside text-slate-700 space-y-2">
                 <li>Built AI‑driven demand forecasting and inventory optimization for 500+ retail stores using <strong>PyTorch</strong> and <strong>Spark</strong> — forecast accuracy +<strong>22%</strong>, stockouts −<strong>19%</strong>, holding costs −<strong>12%</strong>.</li>
-                <li>Processed multi‑terabyte sales/transaction data with <strong>Spark on AWS EMR</strong>, enabling near real‑time forecasts and reduced data latency.</li>
-                <li>Automated ETL with <strong>Airflow</strong>, <strong>Redshift</strong>, and <strong>AWS S3</strong> — manual intervention −<strong>40%</strong>, improved reliability.</li>
+                <li>Processed multi‑terabyte sales/transaction data with <strong>Spark on AWS EMR</strong>, enabling near real‑time forecasts.</li>
+                <li>Automated ETL with <strong>Airflow</strong>, <strong>Redshift</strong>, and <strong>AWS S3</strong> — manual intervention −<strong>40%</strong>.</li>
                 <li>Engineered features from seasonal, regional, and promotional patterns to improve robustness and generalization.</li>
-                <li>Deployed models as REST APIs on <strong>AWS SageMaker</strong> and integrated with enterprise supply chain systems for live usage.</li>
-                <li>Built store‑level replenishment recommendations; improved customer satisfaction by reducing stockouts.</li>
-                <li>Created dashboards in <strong>Tableau</strong> and <strong>Grafana</strong> with KPIs (forecasts, reorder cycles, risk of stockouts).</li>
+                <li>Deployed models as REST APIs on <strong>AWS SageMaker</strong> integrated with enterprise supply chain systems.</li>
+                <li>Built store‑level replenishment recommendations with live dashboards in <strong>Tableau</strong> and <strong>Grafana</strong>.</li>
                 <li>Implemented unsupervised anomaly detection to flag irregular spikes during promotions/seasonality.</li>
-                <li>Containerized services with <strong>Docker</strong> on <strong>Kubernetes</strong> for scalable, fault‑tolerant operations.</li>
-                <li>Authored documentation and training guides, reducing onboarding time and easing adoption of AI workflows.</li>
+                <li>Containerized services with <strong>Docker</strong> on <strong>Kubernetes</strong> for scalability and reliability.</li>
+                <li>Authored documentation and training guides for faster onboarding and adoption.</li>
               </ul>
             </div>
           </div>
@@ -166,13 +152,13 @@
       </div>
     </section>
 
-    <!-- Volunteering (expanded + logos) -->
+    <!-- VOLUNTEERING -->
     <section id="volunteering" class="py-20 md:py-28">
       <div class="container mx-auto px-6 max-w-5xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Volunteering Experience</h2>
         <div class="bg-white rounded-lg shadow-md p-6">
           <div class="flex items-start gap-4 mb-2">
-            <img src="assets/images/ntari.png" alt="NTARI" class="w-10 h-10 rounded object-contain" />
+            <img src="assets/images/ntari.png" alt="NTARI" class="w-10 h-10 rounded object-contain" onerror="this.style.display='none'"/>
             <div>
               <h3 class="text-xl font-bold">Frontend Developer (Volunteer)</h3>
               <p class="text-blue-700 font-semibold">NTARI – LogicLingo</p>
@@ -185,7 +171,7 @@
             <li>Built interactive features and workflows that improved navigation efficiency, leading to a <strong>20%</strong> faster task completion rate.</li>
             <li>Reviewed backend files and system architecture to surface integration issues early; reduced deployment bugs by <strong>15%</strong>.</li>
             <li>Participated in Agile ceremonies and Slack‑based collaboration; ensured <strong>100%</strong> on‑time delivery of weekly sprint goals.</li>
-            <li>Optimized performance via refactoring and asset optimization; page load times −<strong>35%</strong> across devices.</li>
+            <li>Optimized performance via refactoring and asset optimization; page load times −<strong>35%</strong>.</li>
             <li>Implemented WCAG 2.1 accessibility; expanded usability and ensured standards compliance.</li>
             <li>Integrated backend APIs into frontend modules for real‑time features; dynamic content delivery efficiency +<strong>40%</strong>.</li>
             <li>Created and maintained technical documentation; improved knowledge transfer and reduced onboarding time by <strong>20%</strong>.</li>
@@ -195,39 +181,38 @@
       </div>
     </section>
 
-    <!-- NGO & Leadership (single image dir + 4 images) -->
+    <!-- NGO & LEADERSHIP (remove 4th card) -->
     <section id="ngo" class="py-20 md:py-28 bg-amber-100">
       <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">NGO & Leadership</h2>
-        <p class="text-center text-slate-700 max-w-3xl mx-auto mb-8">A life without a cause is a life without an effect. As Associate President of Street Cause SWEC (2020–2021), I led COVID‑19 relief efforts and campus‑wide impact projects with transparent budgeting and measurable outcomes.</p>
+        <p class="text-center text-slate-700 max-w-3xl mx-auto mb-8">Executive Board Member — <strong>Associate President (2020–2021)</strong>, Street Cause SWEC. A life without a cause is a life without an effect.</p>
 
         <div class="bg-white rounded-lg shadow p-6 mb-10">
           <h3 class="text-xl font-bold mb-3">Highlights</h3>
           <ul class="list-disc list-inside space-y-2 text-slate-700">
-            <li>Executive Board Member — <strong>Associate President</strong>, Street Cause SWEC (2020–2021).</li>
-            <li>Coordinated COVID‑19 relief: masks, groceries, sanitation supplies; mobilized volunteers for distribution.</li>
+            <li>Led COVID‑19 relief: masks, groceries, and sanitation supplies; mobilized volunteers for distribution.</li>
             <li>Built partnerships with local homes/organizations; maintained ethical distribution and audit trails.</li>
-            <li>Ran budget planning and vendor liaison; ensured transparent reporting to stakeholders.</li>
+            <li>Managed budget planning and vendor liaison; ensured transparent reporting to stakeholders.</li>
             <li>Championed the ethos: “Not only be the change — make it easy for others to change with us.”</li>
           </ul>
         </div>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <!-- NGO hero / role -->
+          <!-- 1: Hero -->
           <article class="bg-white rounded-lg shadow overflow-hidden">
             <div class="w-full bg-slate-50">
-              <img src="assets/images/ngo-hero.jpg" alt="Street Cause SWEC Executive Board 2020-21" class="w-full max-h-[520px] object-contain"/>
+              <img src="assets/images/ngo-hero.jpg" alt="Street Cause SWEC Executive Board 2020-21" class="w-full max-h-[520px] object-contain" onerror="this.style.display='none'"/>
             </div>
             <div class="p-5">
               <h4 class="font-bold text-lg mb-2">Executive Board (Associate President), Street Cause SWEC (2020–2021)</h4>
-              <p class="text-slate-700">Not only striving to be the change we want to see in the world, but also helping those around us through similarities of the heart makes others want to change with us. Doing something for those in need — with no pay but the privilege of doing it — was our guiding principle as the first Executive Board of Street Cause SWEC (2020–21).</p>
+              <p class="text-slate-700">“Not only striving to be the change we want to see in the world, but also helping those around us through similarities of the heart so others want to change along with us.”</p>
             </div>
           </article>
 
-          <!-- NGO 1: Mask Donation Drive -->
+          <!-- 2: Mask Donation Drive -->
           <article class="bg-white rounded-lg shadow overflow-hidden">
             <div class="w-full bg-slate-50">
-              <img src="assets/images/ngo1-mask-drive.jpg" alt="Mask Donation Drive" class="w-full max-h-[520px] object-contain"/>
+              <img src="assets/images/ngo1-mask-drive.jpg" alt="Mask Donation Drive" class="w-full max-h-[520px] object-contain" onerror="this.style.display='none'"/>
             </div>
             <div class="p-5">
               <h4 class="font-bold text-lg mb-2">Mask Donation Drive — COVID‑19 Response</h4>
@@ -239,266 +224,303 @@
             </div>
           </article>
 
-          <!-- NGO 2: Slum Adoption (Narrative) -->
+          <!-- 3: Slum Adoption Narrative -->
           <article class="bg-white rounded-lg shadow overflow-hidden">
             <div class="w-full bg-slate-50">
-              <img src="assets/images/ngo2-slum-adoption.jpg" alt="Slum Adoption Project overview" class="w-full max-h-[520px] object-contain"/>
+              <img src="assets/images/ngo2-slum-adoption.jpg" alt="Slum Adoption Project overview" class="w-full max-h-[520px] object-contain" onerror="this.style.display='none'"/>
             </div>
             <div class="p-5">
               <h4 class="font-bold text-lg mb-2">Slum Adoption Initiative — Monthly Groceries</h4>
               <p class="text-slate-700">This pandemic situation has put us in a problematic phase to deal with. Slums in Hyderabad are struggling with a major crisis due to the current situation. They aren't able to get proper income for their daily groceries. After the survey conducted by Chief Executive Board, we at Street Cause have come together and took an initiative to help people living in the slums. We adopted <strong>262 families</strong> in the slums, providing them with monthly groceries for the next three months depending on the situation, till it becomes a satisfactory place to live at. <span class="text-slate-500">@streetcausehyd</span></p>
             </div>
           </article>
-
-          <!-- NGO 3: Slum Adoption (Detailed) -->
-          <article class="bg-white rounded-lg shadow overflow-hidden">
-            <div class="w-full bg-slate-50">
-              <img src="assets/images/ngo3-slum-adoption-details.jpg" alt="Slum Adoption Project details" class="w-full max-h-[520px] object-contain"/>
-            </div>
-            <div class="p-5">
-              <h4 class="font-bold text-lg mb-2">Slum Adoption Project — Budget & Impact</h4>
-              <p class="text-slate-700">This pandemic situation has put us in a problematic phase to deal with. Slums in Hyderabad are struggling with a major crisis due to the current situation. They aren't able to get proper income for their daily groceries. After the survey conducted by Chief Executive Board, we at Street Cause have come together and took an initiative to help people living in the slums. We adopted families in the slums, providing them with monthly groceries for the next three months depending on the situation, till it becomes a satisfactory place to live at.</p>
-            </div>
-          </article>
         </div>
-
-        <p class="text-center text-sm text-slate-600 mt-6">Store images in <code>assets/images/</code>: <code>ngo-hero.jpg</code>, <code>ngo1-mask-drive.jpg</code>, <code>ngo2-slum-adoption.jpg</code>, <code>ngo3-slum-adoption-details.jpg</code>.</p>
       </div>
     </section>
 
-    <!-- Skills (new format: compact lists with icons) -->
+    <!-- SKILLS (outlined circles containing lists; covers all resume skills) -->
     <section id="skills" class="py-20 md:py-28">
-      <div class="container mx-auto px-6 max-w-6xl">
+      <div class="container mx-auto px-6 max-w-7xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Technical Skills</h2>
-
-        <!-- Premium skill layout: glass cards + icon cloud -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur shadow-md p-6">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-200/40 rounded-full blur-3xl"></div>
-            <h3 class="text-lg font-bold text-blue-700">Generative AI</h3>
-            <p class="text-slate-700 mt-2 text-sm">LLMs, RAG, Agents, Prompt Engineering, Fine‑tuning, Guardrails</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">LangChain</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Hugging Face</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">OpenAI</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Groq</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">Ollama</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">FAISS/Chroma/Milvus</span>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 justify-items-center">
+          <!-- Circle helper: 16rem circle with inner list -->
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">Generative AI</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>LLMs, RAG, Agents</li>
+                <li>Prompt Eng., Fine‑tuning</li>
+                <li>Guardrails</li>
+                <li>LangChain, Hugging Face</li>
+                <li>OpenAI, Llama, Groq, Ollama</li>
+                <li>Milvus, ChromaDB, FAISS</li>
+                <li>DALL·E</li>
+              </ul>
             </div>
           </div>
 
-          <div class="relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur shadow-md p-6">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-amber-200/40 rounded-full blur-3xl"></div>
-            <h3 class="text-lg font-bold text-blue-700">ML & Data Science</h3>
-            <p class="text-slate-700 mt-2 text-sm">Supervised/Unsupervised, Feature Eng., Validation, Modeling, Optimization</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">scikit‑learn</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Pandas</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">NumPy</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Stats</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">EDA</span>
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">NLP</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>Sentiment/Emotion</li>
+                <li>Text Class., Summarization</li>
+                <li>NER</li>
+                <li>spaCy, NLTK</li>
+              </ul>
             </div>
           </div>
 
-          <div class="relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur shadow-md p-6">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-200/40 rounded-full blur-3xl"></div>
-            <h3 class="text-lg font-bold text-blue-700">Deep Learning & CV</h3>
-            <p class="text-slate-700 mt-2 text-sm">CNNs (ResNet, MobileNet), Transfer Learning, Detection, Segmentation</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">PyTorch</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">TensorFlow</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">Keras</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">OpenCV</span>
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">Deep Learning & CV</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>ANN, CNN, RNN, LSTM</li>
+                <li>Transfer Learning</li>
+                <li>ResNet, MobileNet</li>
+                <li>Image Class., Detection</li>
+                <li>OpenCV, PyTorch, TF, Keras</li>
+              </ul>
             </div>
           </div>
 
-          <div class="relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur shadow-md p-6">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-amber-200/40 rounded-full blur-3xl"></div>
-            <h3 class="text-lg font-bold text-blue-700">Cloud & MLOps</h3>
-            <p class="text-slate-700 mt-2 text-sm">Model serving, CI/CD, Containers, Orchestration, Monitoring</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">AWS (SageMaker/Bedrock/Lambda/S3/Redshift)</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Azure (Prompt Flow/Cosmos/AKS)</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">GCP (Vertex/BigQuery ML/PubSub)</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Docker/Kubernetes</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">Kafka/Airflow</span>
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">ML & Data Science</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>Supervised/Unsupervised</li>
+                <li>Feature Eng., Modeling</li>
+                <li>Validation & Tuning</li>
+                <li>Scikit‑learn, Stats</li>
+              </ul>
             </div>
           </div>
 
-          <div class="relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur shadow-md p-6">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-blue-200/40 rounded-full blur-3xl"></div>
-            <h3 class="text-lg font-bold text-blue-700">Data & APIs</h3>
-            <p class="text-slate-700 mt-2 text-sm">Warehousing, Retrieval, REST, Integration</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">SQL/Postgres/MySQL</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Mongo/Dynamo</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">Elasticsearch</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">FastAPI/Flask/Django</span>
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">Cloud Platforms</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>AWS: Bedrock, SageMaker, Lambda, EC2, S3, CloudFront/Watch</li>
+                <li>API GW, Redshift, Kinesis, EMR, QuickSight</li>
+                <li>Azure: Prompt Flow, Cosmos, Bot Framework, AKS</li>
+                <li>GCP: Vertex, AutoML, BigQuery ML, Pub/Sub</li>
+              </ul>
             </div>
           </div>
 
-          <div class="relative overflow-hidden rounded-2xl bg-white/70 backdrop-blur shadow-md p-6">
-            <div class="absolute -top-10 -right-10 w-40 h-40 bg-amber-200/40 rounded-full blur-3xl"></div>
-            <h3 class="text-lg font-bold text-blue-700">Visualization</h3>
-            <p class="text-slate-700 mt-2 text-sm">Dashboards and model explainability</p>
-            <div class="mt-4 flex flex-wrap gap-2">
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">Power BI</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Tableau</span>
-              <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">Grafana</span>
-              <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-semibold">Matplotlib/Seaborn</span>
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">MLOps & DevOps</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>Git/GitHub, Docker, Kubernetes</li>
+                <li>CI/CD (CodePipeline/Build)</li>
+                <li>Apache Kafka, Airflow</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">Programming & Web</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>Python, C, JavaScript, TypeScript</li>
+                <li>HTML, CSS, Linux, SQL, Bash</li>
+                <li>FastAPI, Flask, Streamlit, Django</li>
+                <li>REST, Postman</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">Databases</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>SQL, MySQL, PostgreSQL</li>
+                <li>MongoDB, DynamoDB, NoSQL</li>
+                <li>Elasticsearch</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="w-64 h-64 rounded-full border-2 border-blue-600 bg-white shadow grid place-items-center p-5 text-center">
+            <div>
+              <h3 class="font-bold text-blue-700">Visualization</h3>
+              <ul class="text-xs text-slate-700 mt-2 leading-snug text-left list-disc pl-4">
+                <li>Power BI, Tableau, Grafana</li>
+                <li>Matplotlib, Seaborn, Excel</li>
+                <li>EDA & Predictive Analytics</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects (4‑image gallery per project, single image dir) -->
+    <!-- PROJECTS (alternating layout; include resume details) -->
     <section id="projects" class="py-20 md:py-28 bg-amber-100">
-      <div class="container mx-auto px-6 max-w-6xl">
+      <div class="container mx-auto px-6 max-w-7xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-14">Projects</h2>
-        <div class="grid lg:grid-cols-2 gap-10">
-          <!-- Research Agent -->
-          <article class="project-card bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="w-full bg-slate-50">
-              <img src="assets/images/research-agent-1.jpg" alt="Research Agent" class="w-full max-h-[420px] object-contain"/>
+        <div class="space-y-14">
+          <!-- 1 Left images / Right text -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="grid grid-cols-2 gap-3 order-1">
+              <img src="assets/images/research-agent-1.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/research-agent-2.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/research-agent-3.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/research-agent-4.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
             </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">AI Research Agent for Healthcare Diagnostics</h3>
-              <p class="text-slate-700 mb-3">Python + Streamlit + LangChain + LLaMA3; RAG over web, academic, and local sources (FAISS, PyMuPDF) to generate cited, structured diagnostics reports with multi‑format export.</p>
+            <div class="order-2">
+              <h3 class="text-2xl font-bold mb-2">AI Research Agent for Healthcare Diagnostics</h3>
+              <p class="text-slate-700 mb-3">Python · Streamlit · LangChain · LLaMA3 · FAISS · PyMuPDF — integrated web/academic/local sources through a RAG pipeline to generate cited, structured diagnostics reports with multi‑format export.</p>
               <ul class="list-disc list-inside text-slate-700 space-y-1">
-                <li>Hybrid retrieval (web/arXiv/PubMed/local PDFs) with deduplication, chunking, and reranking.</li>
-                <li>Prompt templates with tool‑use and guardrails; configurable context windows and temperature.</li>
-                <li>Exports to PDF/Markdown; audit trail with citations.</li>
+                <li>Hybrid retrieval (web, arXiv/PubMed, local PDFs) with deduplication, chunking, re‑ranking.</li>
+                <li>Prompt templates with tool‑use + guardrails; configurable context window & temperature.</li>
+                <li>PDF/Markdown export; audit trail with citations for clinical review.</li>
               </ul>
-              <div class="grid grid-cols-3 gap-2 mt-4">
-                <img src="assets/images/research-agent-2.jpg" alt="Research Agent 2" class="w-full h-32 object-contain rounded"/>
-                <img src="assets/images/research-agent-3.jpg" alt="Research Agent 3" class="w-full h-32 object-contain rounded"/>
-                <img src="assets/images/research-agent-4.jpg" alt="Research Agent 4" class="w-full h-32 object-contain rounded"/>
-              </div>
-              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
+              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">GitHub →</a>
             </div>
-          </article>
+          </div>
 
-          <!-- Career Copilot -->
-          <article class="project-card bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="w-full bg-slate-50">
-              <img src="assets/images/career-copilot-1.jpg" alt="Career Copilot" class="w-full max-h-[420px] object-contain"/>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Career Navigation AI</h3>
-              <p class="text-slate-700 mb-3">LangChain + GPT‑4 copilot that builds personalized AI/ML learning paths, aggregates resources, and tracks goals with a Streamlit UI — improved readiness by <strong>~40%</strong> in user tests.</p>
+          <!-- 2 Right images / Left text -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <h3 class="text-2xl font-bold mb-2">Career Navigation AI</h3>
+              <p class="text-slate-700 mb-3">LangChain + GPT‑4 with a Streamlit UI that builds personalized AI/ML learning paths, aggregates resources, and improves career readiness by ~40%.</p>
               <ul class="list-disc list-inside text-slate-700 space-y-1">
-                <li>Embeddings for resource clustering; progress tracking and recommendations.</li>
-                <li>Actionable tasks per week; export plans and share links.</li>
+                <li>Embeddings for resource clustering; progress tracking and tailored recommendations.</li>
+                <li>Actionable weekly tasks; export/share study plans.</li>
               </ul>
-              <div class="grid grid-cols-3 gap-2 mt-4">
-                <img src="assets/images/career-copilot-2.jpg" alt="Career Copilot 2" class="w-full h-32 object-contain rounded"/>
-                <img src="assets/images/career-copilot-3.jpg" alt="Career Copilot 3" class="w-full h-32 object-contain rounded"/>
-                <img src="assets/images/career-copilot-4.jpg" alt="Career Copilot 4" class="w-full h-32 object-contain rounded"/>
-              </div>
-              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
+              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">GitHub →</a>
             </div>
-          </article>
+            <div class="grid grid-cols-2 gap-3 order-1 md:order-2">
+              <img src="assets/images/career-copilot-1.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/career-copilot-2.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/career-copilot-3.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/career-copilot-4.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+            </div>
+          </div>
 
-          <!-- Attendance -->
-          <article class="project-card bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="w-full bg-slate-50">
-              <img src="assets/images/attendance-1.jpg" alt="Attendance System" class="w-full max-h-[420px] object-contain"/>
+          <!-- 3 Left images / Right text -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="grid grid-cols-2 gap-3 order-1">
+              <img src="assets/images/attendance-1.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/attendance-2.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/attendance-3.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/attendance-4.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
             </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Automatic Attendance Monitoring (Face Recognition)</h3>
-              <p class="text-slate-700 mb-3">OpenCV + dlib + Django with embeddings and SVM/KNN classifiers; analytics dashboard. Eliminated proxy attendance; achieved <strong>95%+</strong> accuracy.</p>
+            <div class="order-2">
+              <h3 class="text-2xl font-bold mb-2">Automatic Attendance Monitoring (Face Recognition)</h3>
+              <p class="text-slate-700 mb-3">OpenCV · dlib · Django with SVM/KNN classifiers; analytics. Eliminated proxy attendance; achieved ~95%+ accuracy.</p>
               <ul class="list-disc list-inside text-slate-700 space-y-1">
-                <li>Real‑time face detection/recognition; secure reporting and audit logs.</li>
+                <li>Real‑time detection & recognition; secure reporting and audit logs.</li>
                 <li>Role‑based access and visual analytics for administrators.</li>
               </ul>
-              <div class="grid grid-cols-3 gap-2 mt-4">
-                <img src="assets/images/attendance-2.jpg" alt="Attendance 2" class="w-full h-32 object-contain rounded"/>
-                <img src="assets/images/attendance-3.jpg" alt="Attendance 3" class="w-full h-32 object-contain rounded"/>
-                <img src="assets/images/attendance-4.jpg" alt="Attendance 4" class="w-full h-32 object-contain rounded"/>
-              </div>
-              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
+              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">GitHub →</a>
             </div>
-          </article>
+          </div>
 
-          <!-- Medical Imaging -->
-          <article class="project-card bg-white rounded-lg shadow-md overflow-hidden">
-            <div class="w-full bg-slate-50">
-              <img src="assets/images/medical-imaging-1.jpg" alt="Medical Imaging" class="w-full max-h-[420px] object-contain"/>
-            </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Medical Image Classification (Brain MRI & Chest X‑ray)</h3>
+          <!-- 4 Right images / Left text -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <h3 class="text-2xl font-bold mb-2">Medical Image Classification (Brain MRI & Chest X‑ray)</h3>
               <p class="text-slate-700 mb-3">CNNs (VGG16/ResNet50) across 10k+ images (~2.7GB). Achieved <strong>98%</strong> brain‑tumor detection accuracy with curated preprocessing and augmentation.</p>
               <ul class="list-disc list-inside text-slate-700 space-y-1">
                 <li>End‑to‑end pipeline: preprocessing → training → evaluation → visualization.</li>
-                <li>Comparative model study; saved best checkpoints and metrics.</li>
+                <li>Comparative model study; best‑checkpoint saving & metrics.</li>
               </ul>
-              <div class="grid grid-cols-3 gap-2 mt-4">
-                <img src="assets/images/medical-imaging-2.jpg" alt="Medical Imaging 2" class="w-full h-32 object-contain rounded"/>
-                <img src="assets/images/medical-imaging-3.jpg" alt="Medical Imaging 3" class="w-full h-32 object-contain rounded"/>
-                <img src="assets/images/medical-imaging-4.jpg" alt="Medical Imaging 4" class="w-full h-32 object-contain rounded"/>
-              </div>
-              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">View on GitHub →</a>
+              <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-block mt-4 font-semibold text-blue-700 hover:underline">GitHub →</a>
             </div>
-          </article>
+            <div class="grid grid-cols-2 gap-3 order-1 md:order-2">
+              <img src="assets/images/medical-imaging-1.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/medical-imaging-2.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/medical-imaging-3.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/medical-imaging-4.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+            </div>
+          </div>
+
+          <!-- 5 Left images / Right text -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="grid grid-cols-2 gap-3 order-1">
+              <img src="assets/images/youth-ml-1.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/youth-ml-2.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/youth-ml-3.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/youth-ml-4.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+            </div>
+            <div class="order-2">
+              <h3 class="text-2xl font-bold mb-2">Youth Smoking & Drug — Analysis & ML Insights</h3>
+              <p class="text-slate-700 mb-3">Analyzed 8,993 records with Python, Pandas, NumPy, Seaborn. Performed EDA, hypothesis testing, and ML modeling to identify high‑risk youth (+18% improvement). Found peer influence ↑ smoking by 20%; school interventions ↓ substance use by 12%.</p>
+            </div>
+          </div>
+
+          <!-- 6 Right images / Left text -->
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1">
+              <h3 class="text-2xl font-bold mb-2">Securing Data with Blockchain & AI (SecNet)</h3>
+              <p class="text-slate-700 mb-3">Designed SecNet architecture integrating Blockchain‑based trusted exchange, AI‑powered secure computing, and a Django prototype for healthcare. Enabled patient‑controlled hospital data access, tamper‑proof records, and reduced unauthorized exposure.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3 order-1 md:order-2">
+              <img src="assets/images/secnet-1.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/secnet-2.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/secnet-3.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+              <img src="assets/images/secnet-4.jpg" class="w-full h-56 md:h-72 object-cover rounded" alt="" onerror="this.style.display='none'">
+            </div>
+          </div>
         </div>
-        <p class="text-center text-sm text-slate-600 mt-6">Place all project images in <code>assets/images/</code> with names like <code>research-agent-1.jpg…4.jpg</code>.</p>
       </div>
     </section>
 
-    <!-- Certificates (official logos, single dir) -->
+    <!-- CERTIFICATES -->
     <section id="certificates" class="py-20 md:py-28">
       <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Certificates</h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/google.png" alt="Google" class="w-12 h-12 rounded object-contain"/>
+            <img src="assets/images/google.png" alt="Google" class="w-12 h-12 rounded object-contain" onerror="this.style.display='none'"/>
             <div>
               <p class="font-semibold">Google IT Support Fundamentals</p>
               <p class="text-slate-600 text-sm">Coursera / Google</p>
             </div>
           </div>
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/1stop.png" alt="1Stop" class="w-12 h-12 rounded object-contain"/>
+            <img src="assets/images/1stop.png" alt="1Stop" class="w-12 h-12 rounded object-contain" onerror="this.style.display='none'"/>
             <div>
               <p class="font-semibold">Website Development</p>
               <p class="text-slate-600 text-sm">1Stop</p>
             </div>
           </div>
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/oracle.png" alt="Oracle" class="w-12 h-12 rounded object-contain"/>
+            <img src="assets/images/oracle.png" alt="Oracle" class="w-12 h-12 rounded object-contain" onerror="this.style.display='none'"/>
             <div>
               <p class="font-semibold">OCI Generative AI Professional</p>
               <p class="text-slate-600 text-sm">Oracle</p>
             </div>
           </div>
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/aws.png" alt="AWS" class="w-12 h-12 rounded object-contain"/>
+            <img src="assets/images/aws.png" alt="AWS" class="w-12 h-12 rounded object-contain" onerror="this.style.display='none'"/>
             <div>
               <p class="font-semibold">Machine Learning Foundations</p>
               <p class="text-slate-600 text-sm">AWS & Udacity</p>
             </div>
           </div>
           <div class="bg-white rounded-xl shadow-sm p-5 flex items-center gap-4">
-            <img src="assets/images/microsoft.png" alt="Microsoft" class="w-12 h-12 rounded object-contain"/>
+            <img src="assets/images/microsoft.png" alt="Microsoft" class="w-12 h-12 rounded object-contain" onerror="this.style.display='none'"/>
             <div>
               <p class="font-semibold">Fundamentals of Generative AI</p>
               <p class="text-slate-600 text-sm">Microsoft</p>
             </div>
           </div>
         </div>
-        <p class="text-center text-sm text-slate-600 mt-6">Store all logos in <code>/assets/images/</code> with the names used above.</p>
       </div>
     </section>
 
-    <!-- Academics (with UNT logo + image, single dir) -->
+    <!-- ACADEMICS -->
     <section id="academics" class="py-20 md:py-28 bg-amber-100">
       <div class="container mx-auto px-6 max-w-6xl">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Academics</h2>
         <div class="grid md:grid-cols-3 gap-6 items-stretch">
           <div class="bg-white rounded-lg shadow p-6 md:col-span-2 flex flex-col">
             <div class="flex items-center gap-3 mb-2">
-              <img src="assets/images/unt.png" alt="University of North Texas" class="w-8 h-8 object-contain"/>
+              <img src="assets/images/unt.png" alt="University of North Texas" class="w-8 h-8 object-contain" onerror="this.style.display='none'"/>
               <h3 class="text-xl font-bold">Master of Science in Computer Science <span class="text-slate-500 font-semibold">— GPA: 3.916/4</span></h3>
             </div>
             <p class="text-slate-700">University of North Texas – Denton, Texas</p>
@@ -509,20 +531,20 @@
             </ul>
           </div>
           <div class="bg-white rounded-lg shadow overflow-hidden">
-            <img src="assets/images/unt-campus.jpg" alt="UNT campus" class="w-full h-full object-cover">
+            <img src="assets/images/unt-campus.jpg" alt="UNT campus" class="w-full h-full object-cover" onerror="this.style.display='none'">
           </div>
         </div>
-        <p class="text-center text-sm text-slate-600 mt-4">Place your campus image at <code>/assets/images/unt-campus.jpg</code>.</p>
       </div>
     </section>
 
-    <!-- Contact (separate section) -->
+    <!-- CONTACT (add phone) -->
     <section id="contact" class="py-20 md:py-24">
       <div class="container mx-auto px-6 max-w-3xl text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Me</h2>
         <p class="text-slate-700 mb-8">Open to Generative AI / LLM roles and collaborations. Reach out below.</p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
           <a href="mailto:Kavyasreechandhi@gmail.com" class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:bg-blue-700"><span class="text-xl">✉️</span> Kavyasreechandhi@gmail.com</a>
+          <a href="tel:+19406298898" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">📞 +1 940 629 8898</a>
           <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">LinkedIn</a>
           <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">GitHub</a>
         </div>
