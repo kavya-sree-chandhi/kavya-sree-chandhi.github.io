@@ -13,14 +13,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Lucide & Heroicons -->
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/outline/index.js"></script>
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
+    body { font-family: 'Inter', sans-serif; }
+    html { font-size: 20px; line-height: 1.7; }
+    h1 { font-size: 4.5rem; } /* ~72px */
+    h2 { font-size: 3rem; }   /* ~48px */
+    h3 { font-size: 2rem; }   /* ~32px */
+    p, li { font-size: 1.15rem; } /* ~19px */
     .nav-link.active { color:#3b82f6; font-weight:700; }
     .project-card { transition:transform .25s, box-shadow .25s; }
     .project-card:hover { transform:translateY(-4px); box-shadow:0 10px 15px -3px rgba(0,0,0,.3), 0 4px 6px -4px rgba(0,0,0,.2); }
@@ -33,8 +35,8 @@
   <!-- HEADER -->
   <header id="header" class="bg-slate-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-slate-800">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#home" class="text-xl font-extrabold text-white">Kavya Sree Chandhi</a>
-      <nav class="hidden md:flex space-x-6">
+      <a href="#home" class="text-2xl font-extrabold text-white">Kavya Sree Chandhi</a>
+      <nav class="hidden md:flex space-x-6 text-lg">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#experience" class="nav-link">Experience</a>
@@ -49,31 +51,31 @@
     </div>
   </header>
 
-  <main class="pt-24">
+  <main class="pt-28">
 
     <!-- HOME -->
-    <section id="home" class="min-h-screen flex items-center text-center">
+    <section id="home" class="min-h-screen flex items-center text-center bg-blue-900">
       <div class="container mx-auto px-6">
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-4">Kavya Sree Chandhi</h1>
-        <h2 class="text-2xl md:text-4xl font-semibold text-blue-400 mb-6">Generative AI Engineer</h2>
-        <p class="max-w-4xl mx-auto text-lg text-slate-300 mb-8">
+        <h1 class="font-extrabold text-white mb-4">Kavya Sree Chandhi</h1>
+        <h2 class="font-semibold text-blue-300 mb-6">Generative AI Engineer</h2>
+        <p class="max-w-4xl mx-auto text-xl text-slate-200 mb-8">
           Generative AI & ML Engineer with <span class="font-semibold text-white">3+ years</span> delivering enterprise AI solutions across 
-          <span class="text-blue-300">education, finance, healthcare, and automotive</span>. Hands-on with <strong>LLMs, RAG, Agents, Fine-tuning</strong>, Python, APIs, and 
+          <span class="text-blue-200">education, finance, healthcare, and automotive</span>. Skilled in <strong>LLMs, RAG, Agents, Fine-tuning</strong>, Python, APIs, and 
           cloud platforms (<strong>Azure · AWS · GCP · Oracle</strong>).
         </p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-full">LinkedIn</a>
-          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-full">GitHub</a>
-          <a href="./Kavya Sree Chandhi.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-full">Resume</a>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="bg-white text-blue-700 px-6 py-3 rounded-full text-lg font-bold">LinkedIn</a>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="bg-white text-blue-700 px-6 py-3 rounded-full text-lg font-bold">GitHub</a>
+          <a href="./Kavya Sree Chandhi.pdf" download class="bg-white text-blue-700 px-6 py-3 rounded-full text-lg font-bold">Resume</a>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="py-20">
+    <section id="about" class="py-24 bg-white text-slate-800">
       <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="text-4xl font-extrabold text-center mb-10 text-blue-400">About Me</h2>
-        <p class="text-lg leading-relaxed text-slate-300 space-y-4">
+        <h2 class="font-extrabold text-center mb-12 text-blue-700">About Me</h2>
+        <p class="text-xl leading-relaxed space-y-4">
           Generative AI & ML Engineer with proven impact in <strong>fraud detection, risk analytics, medical imaging</strong>, and <strong>education platforms</strong>. 
           Specialized in <strong>Generative AI, Conversational AI, Multi-Agent Systems, RAG pipelines</strong>, and prompt engineering.  
           <br/><br/>
@@ -86,16 +88,16 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="py-20 bg-slate-800">
+    <section id="experience" class="py-24 bg-slate-900 text-slate-100">
       <div class="container mx-auto px-6 max-w-6xl">
-        <h2 class="text-4xl font-extrabold text-center mb-14 text-blue-400">Professional Experience</h2>
-        <!-- Add all jobs from resume here -->
-        <div class="space-y-12">
+        <h2 class="font-extrabold text-center mb-14 text-blue-400">Professional Experience</h2>
+        <div class="space-y-16">
+
           <!-- UWorld -->
-          <div>
-            <h3 class="text-2xl font-bold text-white">Generative AI Engineer – UWorld</h3>
-            <p class="text-slate-400 mb-4">Aug 2024 – Present | Irving, TX</p>
-            <ul class="list-disc list-inside text-slate-300 space-y-2">
+          <div class="bg-slate-800 rounded-xl p-8 shadow-lg">
+            <h3 class="text-3xl font-bold text-white mb-2">Generative AI Engineer – UWorld</h3>
+            <p class="text-slate-400 mb-6">Aug 2024 – Present | Irving, TX</p>
+            <ul class="list-disc list-inside text-xl space-y-2">
               <li>Developed AI-driven essay grading system aligned with College Board rubrics, ensuring consistent evaluation.</li>
               <li>Delivered real-time feedback on grammar, structure, and content, accelerating student improvement.</li>
               <li>Engineered adaptive test simulator with official exam timing, improving readiness.</li>
@@ -106,62 +108,137 @@
               <li>Optimized latency with caching + prompt optimization, response speed +<strong>35%</strong>.</li>
             </ul>
           </div>
+
           <!-- DXC -->
-          <div>
-            <h3 class="text-2xl font-bold text-white">Associate Professional Software Engineer – DXC Technology</h3>
-            <p class="text-slate-400 mb-4">Aug 2022 – Aug 2023 | Bengaluru, India</p>
-            <ul class="list-disc list-inside text-slate-300 space-y-2">
+          <div class="bg-slate-800 rounded-xl p-8 shadow-lg">
+            <h3 class="text-3xl font-bold text-white mb-2">Associate Professional Software Engineer – DXC Technology</h3>
+            <p class="text-slate-400 mb-6">Aug 2022 – Aug 2023 | Bengaluru, India</p>
+            <ul class="list-disc list-inside text-xl space-y-2">
               <li>Automated PLM workflows with Python, reducing manual effort by <strong>30%</strong>.</li>
               <li>Integrated predictive maintenance ML models, downtime −<strong>15%</strong>.</li>
               <li>Built dashboards in Tableau + Grafana for performance insights.</li>
               <li>Implemented CI/CD pipelines with Docker + Jenkins, reducing deployment cycles.</li>
             </ul>
           </div>
+
           <!-- Pelican -->
-          <div>
-            <h3 class="text-2xl font-bold text-white">Data Analyst – Pelican IT Solutions</h3>
-            <p class="text-slate-400 mb-4">Aug 2021 – Jul 2022 | Hyderabad, India</p>
-            <ul class="list-disc list-inside text-slate-300 space-y-2">
+          <div class="bg-slate-800 rounded-xl p-8 shadow-lg">
+            <h3 class="text-3xl font-bold text-white mb-2">Data Analyst – Pelican IT Solutions</h3>
+            <p class="text-slate-400 mb-6">Aug 2021 – Jul 2022 | Hyderabad, India</p>
+            <ul class="list-disc list-inside text-xl space-y-2">
               <li>Built fraud detection models (Random Forest, Autoencoders, Isolation Forest), accuracy +<strong>20%</strong>.</li>
               <li>Automated ETL pipelines with Python, reducing manual effort by <strong>30%</strong>.</li>
               <li>Designed fraud monitoring dashboards in Flask + Grafana.</li>
               <li>Collaborated with compliance teams, ensuring KYC/AML alignment.</li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
 
-    <!-- TECHNICAL SKILLS (with icons) -->
-    <section id="skills" class="py-20">
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-white text-slate-900">
       <div class="container mx-auto px-6 max-w-6xl">
-        <h2 class="text-4xl font-extrabold text-center mb-12 text-blue-400">Technical Skills</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="flex items-start gap-3">
-            <i data-lucide="cpu" class="text-blue-400 w-6 h-6"></i>
-            <div><h3 class="font-bold">Generative AI</h3><p>LLMs, RAG, Agents, LangChain, Hugging Face, Vector DBs</p></div>
+        <h2 class="font-extrabold text-center mb-12 text-blue-700">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 text-xl">
+          <div class="flex items-start gap-3"><i data-lucide="cpu" class="text-blue-600 w-8 h-8"></i><div><h3 class="font-bold">Generative AI</h3><p>LLMs, RAG, Agents, LangChain, Hugging Face, Vector DBs</p></div></div>
+          <div class="flex items-start gap-3"><i data-lucide="database" class="text-blue-600 w-8 h-8"></i><div><h3 class="font-bold">Databases</h3><p>SQL, PostgreSQL, MongoDB, DynamoDB, Neo4j</p></div></div>
+          <div class="flex items-start gap-3"><i data-lucide="cloud" class="text-blue-600 w-8 h-8"></i><div><h3 class="font-bold">Cloud</h3><p>Azure, AWS, GCP, Oracle Cloud</p></div></div>
+          <div class="flex items-start gap-3"><i data-lucide="layers" class="text-blue-600 w-8 h-8"></i><div><h3 class="font-bold">ML & DL</h3><p>PyTorch, TensorFlow, Keras, Scikit-learn</p></div></div>
+          <div class="flex items-start gap-3"><i data-lucide="code" class="text-blue-600 w-8 h-8"></i><div><h3 class="font-bold">Programming</h3><p>Python, C, JavaScript, SQL</p></div></div>
+        </div>
+      </div>
+    </section>
+     <!-- VOLUNTEERING (all resume points) -->
+    <section id="volunteering" class="py-20 md:py-28">
+      <div class="container mx-auto px-6 max-w-5xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12">Volunteering Experience</h2>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="flex items-start gap-4 mb-2">
+            <img src="assets/images/ntari.png" alt="NTARI" class="w-10 h-10 rounded object-contain" onerror="this.style.display='none'"/>
+            <div>
+              <h3 class="text-xl font-extrabold">Frontend Developer (Volunteer)</h3>
+              <p class="text-blue-700 font-semibold">NTARI – LogicLingo</p>
+              <p class="text-sm text-slate-500">Jun 2025 – Aug 2025</p>
+            </div>
           </div>
-          <div class="flex items-start gap-3">
-            <i data-lucide="database" class="text-blue-400 w-6 h-6"></i>
-            <div><h3 class="font-bold">Databases</h3><p>SQL, PostgreSQL, MongoDB, DynamoDB, Neo4j</p></div>
-          </div>
-          <div class="flex items-start gap-3">
-            <i data-lucide="cloud" class="text-blue-400 w-6 h-6"></i>
-            <div><h3 class="font-bold">Cloud</h3><p>Azure, AWS, GCP, Oracle Cloud</p></div>
-          </div>
-          <div class="flex items-start gap-3">
-            <i data-lucide="layers" class="text-blue-400 w-6 h-6"></i>
-            <div><h3 class="font-bold">ML & DL</h3><p>PyTorch, TensorFlow, Keras, Scikit-learn</p></div>
-          </div>
-          <div class="flex items-start gap-3">
-            <i data-lucide="code" class="text-blue-400 w-6 h-6"></i>
-            <div><h3 class="font-bold">Programming</h3><p>Python, C, JavaScript, SQL</p></div>
-          </div>
+          <ul class="list-disc list-inside text-slate-700 space-y-2">
+            <li>Designed and implemented responsive UIs using HTML, CSS, JavaScript (and Python frameworks) → usability ↑ and user satisfaction +<strong>25%</strong>.</li>
+            <li>Built reusable UI components/layouts → scalability ↑, redundant code −<strong>30%</strong>.</li>
+            <li>Developed interactive features/workflows → navigation efficiency +<strong>20%</strong>.</li>
+            <li>Reviewed backend files &amp; architecture, caught integration issues early → deployment bugs −<strong>15%</strong>.</li>
+            <li>Participated in Agile ceremonies &amp; Slack collaboration → <strong>100%</strong> on-time sprints.</li>
+            <li>Optimized frontend performance (refactors &amp; assets) → page load −<strong>35%</strong>.</li>
+            <li>Implemented WCAG 2.1 accessibility; expanded usability &amp; compliance.</li>
+            <li>Integrated backend APIs for real-time features → dynamic content efficiency +<strong>40%</strong>.</li>
+            <li>Wrote technical documentation for workflows → onboarding time −<strong>20%</strong>.</li>
+            <li>Recognized by leadership for initiative and consistency (≈20 hrs/week) hitting key milestones.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-  <!-- ACADEMIC PROJECTS -->
+    <!-- NGO & LEADERSHIP (full images, no cropping) -->
+    <section id="ngo" class="py-20 md:py-28 bg-amber-100">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6">NGO & Leadership — Street Cause SWEC</h2>
+        <p class="text-center text-slate-700 max-w-4xl mx-auto mb-8">
+          Executive Board Member — <strong>Associate President (2020–2021)</strong>. A life without a cause is a life without an effect.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Image 1: Executive Board / Role -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <div class="bg-white w-full grid place-items-center p-2">
+              <img src="assets/images/ngo-hero.jpg" alt="Street Cause SWEC Executive Board 2020-21"
+                   class="w-full max-h-[520px] object-contain"
+                   onerror="this.style.display='none'"/>
+            </div>
+            <div class="p-5">
+              <h4 class="font-extrabold text-lg mb-2">Executive Board (Associate President), Street Cause SWEC (2020–2021)</h4>
+              <p class="text-slate-700">“Not only striving to be the change we want to see in the world, but also helping those around us through similarities of the heart so others want to change along with us.” Service for its own sake guided our board.</p>
+            </div>
+          </article>
+
+          <!-- Image 2: Mask Donation Drive -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <div class="bg-white w-full grid place-items-center p-2">
+              <img src="assets/images/ngo1-mask-drive.jpg" alt="Mask Donation Drive"
+                   class="w-full max-h-[520px] object-contain"
+                   onerror="this.style.display='none'"/>
+            </div>
+            <div class="p-5">
+              <h4 class="font-extrabold text-lg mb-2">Mask Donation Drive — COVID-19 Response</h4>
+              <p class="text-slate-700 mb-3">
+                During the pandemic, many destitute communities lacked basic protection. We conducted a mask distribution drive to support at-risk elderly and migrant families.
+              </p>
+              <p class="text-slate-700"><strong>Division:</strong> Street Cause SWEC · <strong>Task #1</strong></p>
+              <p class="text-slate-700"><strong>Venues:</strong> Anurag Human Services (Old-age Home), Tolichowki; areas near Manikonda/Chitrapuri.</p>
+            </div>
+          </article>
+
+          <!-- Image 3: Slum Adoption narrative -->
+          <article class="bg-white rounded-xl shadow overflow-hidden">
+            <div class="bg-white w-full grid place-items-center p-2">
+              <img src="assets/images/ngo2-slum-adoption.jpg" alt="Slum Adoption Initiative"
+                   class="w-full max-h-[520px] object-contain"
+                   onerror="this.style.display='none'"/>
+            </div>
+            <div class="p-5">
+              <h4 class="font-extrabold text-lg mb-2">Slum Adoption Initiative — Monthly Groceries</h4>
+              <p class="text-slate-700">
+                This pandemic situation has put us in a problematic phase to deal with. Slums in Hyderabad are struggling with a major crisis due to the current situation.
+                They aren't able to get proper income for their daily groceries. After the survey conducted by Chief Executive Board, we at Street Cause have come together
+                and took an initiative to help people living in the slums. We adopted <strong>262 families</strong> in the slums, providing them with monthly groceries for next three months
+                depending on the situation, till it becomes a satisfactory place to live at. <span class="text-slate-500">@streetcausehyd</span>
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ACADEMIC PROJECTS -->
 <section id="projects" class="py-20 md:py-28 bg-amber-100">
   <div class="container mx-auto px-6 max-w-6xl">
     <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-14 text-blue-800">Academic Projects</h2>
@@ -345,6 +422,11 @@
     </div>
   </div>
 </section>
+
+
+
+
+
     <!-- ACADEMICS -->
     <section id="academics" class="py-20 md:py-28 bg-amber-100">
       <div class="container mx-auto px-6 max-w-62xl">
@@ -369,120 +451,51 @@
       </div>
     </section>
 
-    <section id="volunteering" class="py-20 md:py-28">
-      <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12">Volunteering Experience</h2>
-        <div class="bg-white rounded-lg shadow-md p-6">
-          <div class="flex items-start gap-4 mb-2">
-            <img src="assets/images/ntari.png" alt="NTARI" class="w-10 h-10 rounded object-contain" onerror="this.style.display='none'"/>
-            <div>
-              <h3 class="text-xl font-extrabold">Frontend Developer (Volunteer)</h3>
-              <p class="text-blue-700 font-semibold">NTARI – LogicLingo</p>
-              <p class="text-sm text-slate-500">Jun 2025 – Aug 2025</p>
-            </div>
-          </div>
-          <ul class="list-disc list-inside text-slate-700 space-y-2">
-            <li>Designed and implemented responsive UIs using HTML, CSS, JavaScript (and Python frameworks) → usability ↑ and user satisfaction +<strong>25%</strong>.</li>
-            <li>Built reusable UI components/layouts → scalability ↑, redundant code −<strong>30%</strong>.</li>
-            <li>Developed interactive features/workflows → navigation efficiency +<strong>20%</strong>.</li>
-            <li>Reviewed backend files &amp; architecture, caught integration issues early → deployment bugs −<strong>15%</strong>.</li>
-            <li>Participated in Agile ceremonies &amp; Slack collaboration → <strong>100%</strong> on-time sprints.</li>
-            <li>Optimized frontend performance (refactors &amp; assets) → page load −<strong>35%</strong>.</li>
-            <li>Implemented WCAG 2.1 accessibility; expanded usability &amp; compliance.</li>
-            <li>Integrated backend APIs for real-time features → dynamic content efficiency +<strong>40%</strong>.</li>
-            <li>Wrote technical documentation for workflows → onboarding time −<strong>20%</strong>.</li>
-            <li>Recognized by leadership for initiative and consistency (≈20 hrs/week) hitting key milestones.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- NGO & LEADERSHIP (full images, no cropping) -->
-    <section id="ngo" class="py-20 md:py-28 bg-amber-100">
-      <div class="container mx-auto px-6 max-w-6xl">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6">NGO & Leadership — Street Cause SWEC</h2>
-        <p class="text-center text-slate-700 max-w-4xl mx-auto mb-8">
-          Executive Board Member — <strong>Associate President (2020–2021)</strong>. A life without a cause is a life without an effect.
-        </p>
-
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Image 1: Executive Board / Role -->
-          <article class="bg-white rounded-xl shadow overflow-hidden">
-            <div class="bg-white w-full grid place-items-center p-2">
-              <img src="assets/images/ngo-hero.jpg" alt="Street Cause SWEC Executive Board 2020-21"
-                   class="w-full max-h-[520px] object-contain"
-                   onerror="this.style.display='none'"/>
-            </div>
-            <div class="p-5">
-              <h4 class="font-extrabold text-lg mb-2">Executive Board (Associate President), Street Cause SWEC (2020–2021)</h4>
-              <p class="text-slate-700">“Not only striving to be the change we want to see in the world, but also helping those around us through similarities of the heart so others want to change along with us.” Service for its own sake guided our board.</p>
-            </div>
-          </article>
-
-          <!-- Image 2: Mask Donation Drive -->
-          <article class="bg-white rounded-xl shadow overflow-hidden">
-            <div class="bg-white w-full grid place-items-center p-2">
-              <img src="assets/images/ngo1-mask-drive.jpg" alt="Mask Donation Drive"
-                   class="w-full max-h-[520px] object-contain"
-                   onerror="this.style.display='none'"/>
-            </div>
-            <div class="p-5">
-              <h4 class="font-extrabold text-lg mb-2">Mask Donation Drive — COVID-19 Response</h4>
-              <p class="text-slate-700 mb-3">
-                During the pandemic, many destitute communities lacked basic protection. We conducted a mask distribution drive to support at-risk elderly and migrant families.
-              </p>
-              <p class="text-slate-700"><strong>Division:</strong> Street Cause SWEC · <strong>Task #1</strong></p>
-              <p class="text-slate-700"><strong>Venues:</strong> Anurag Human Services (Old-age Home), Tolichowki; areas near Manikonda/Chitrapuri.</p>
-            </div>
-          </article>
-
-          <!-- Image 3: Slum Adoption narrative -->
-          <article class="bg-white rounded-xl shadow overflow-hidden">
-            <div class="bg-white w-full grid place-items-center p-2">
-              <img src="assets/images/ngo2-slum-adoption.jpg" alt="Slum Adoption Initiative"
-                   class="w-full max-h-[520px] object-contain"
-                   onerror="this.style.display='none'"/>
-            </div>
-            <div class="p-5">
-              <h4 class="font-extrabold text-lg mb-2">Slum Adoption Initiative — Monthly Groceries</h4>
-              <p class="text-slate-700">
-                This pandemic situation has put us in a problematic phase to deal with. Slums in Hyderabad are struggling with a major crisis due to the current situation.
-                They aren't able to get proper income for their daily groceries. After the survey conducted by Chief Executive Board, we at Street Cause have come together
-                and took an initiative to help people living in the slums. We adopted <strong>262 families</strong> in the slums, providing them with monthly groceries for next three months
-                depending on the situation, till it becomes a satisfactory place to live at. <span class="text-slate-500">@streetcausehyd</span>
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    
     <!-- CONTACT -->
-    <section id="contact" class="py-20 bg-slate-800">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-extrabold mb-6 text-blue-400">Contact Me</h2>
-        <p class="mb-6 text-slate-300">Open to Generative AI / LLM roles and collaborations.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <span class="bg-slate-700 px-5 py-2 rounded-full">📞 +1 940-629-8898</span>
-          <a href="mailto:chandhikavyasree@gmail.com" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full">✉️ Email</a>
-          <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full">🔗 LinkedIn</a>
-          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full">🐙 GitHub</a>
-          <a href="https://kavya-sree-chandhi.github.io" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full">🌐 Portfolio</a>
-          <a href="./Kavya Sree Chandhi.pdf" download class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-full">📄 Resume</a>
+    <section id="contact" class="py-20 md:py-24">
+      <div class="container mx-auto px-6 max-w-42xl text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Contact Me</h2>
+        <p class="text-slate-700 mb-8">Open to Generative AI / LLM roles and collaborations.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
+          <a href="mailto:Kavyasreechandhi@gmail.com" class="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold py-2.5 px-5 rounded-full hover:bg-blue-700"><span class="text-xl">✉️Gmail</a>
+          <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">🔗LinkedIn</a>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="inline-flex items-center gap-2 bg-white text-blue-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full hover:bg-blue-50">🐙GitHub</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-slate-950 text-slate-400 py-6">
+  <footer class="bg-blue-900 text-amber-100 py-6">
     <div class="container mx-auto px-6 text-center">
       <p>© 2025 Kavya Sree Chandhi. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    lucide.createIcons();
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const header = document.getElementById('header');
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+
+      mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) header.classList.add('shadow-md'); else header.classList.remove('shadow-md');
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href').substring(1) === entry.target.id) link.classList.add('active');
+            });
+          }
+        });
+      }, { threshold: 0.45 });
+      sections.forEach(section => observer.observe(section));
+    });
   </script>
 </body>
 </html>
