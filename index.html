@@ -2,485 +2,268 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kavya Sree Chandhi | Software Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kavya Sree Chandhi – Software Engineer</title>
 
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    .nav-link.active {
-      color: #60a5fa;
-      font-weight: 700;
-    }
-
-    .project-card,
-    .skill-card,
-    .experience-card {
-      transition: all 0.3s ease;
-    }
-
-    .project-card:hover,
-    .skill-card:hover,
-    .experience-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
+    body { font-family: 'Inter', sans-serif; }
+    html { font-size: 18px; line-height: 1.6; }
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 1.75rem; }
+    p, li { font-size: 1rem; }
+    .nav-link.active { color:#3b82f6; font-weight:700; }
+    .project-card { transition:transform .25s, box-shadow .25s; }
+    .project-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 10px 15px -3px rgba(0,0,0,.3), 0 4px 6px -4px rgba(0,0,0,.2);
     }
   </style>
 </head>
+<body class="bg-slate-900 text-slate-100 antialiased">
 
-<body class="bg-slate-900 text-slate-100">
-
-  <!-- HEADER -->
-  <header
-    id="header"
-    class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800"
-  >
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#home" class="text-2xl font-extrabold text-white">
-        Kavya Sree Chandhi
-      </a>
-
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#home" class="nav-link hover:text-blue-400">Home</a>
-        <a href="#about" class="nav-link hover:text-blue-400">About</a>
-        <a href="#experience" class="nav-link hover:text-blue-400">Experience</a>
-        <a href="#skills" class="nav-link hover:text-blue-400">Skills</a>
-        <a href="#projects" class="nav-link hover:text-blue-400">Projects</a>
-        <a href="#certifications" class="nav-link hover:text-blue-400">Certifications</a>
-        <a href="#education" class="nav-link hover:text-blue-400">Education</a>
-        <a href="#volunteering" class="nav-link hover:text-blue-400">Volunteering</a>
-        <a href="#leadership" class="nav-link hover:text-blue-400">Leadership</a>
-        <a href="#contact" class="nav-link hover:text-blue-400">Contact</a>
+  <header id="header" class="bg-slate-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 border-b border-slate-800">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-extrabold text-white">Kavya Sree Chandhi</a>
+      <nav class="hidden md:flex space-x-6 text-lg">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certificates" class="nav-link">Certificates</a>
+        <a href="#academics" class="nav-link">Academics</a>
+        <a href="#volunteering" class="nav-link">Volunteering</a>
+        <a href="#ngo" class="nav-link">NGO & Leadership</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main class="pt-24">
+  <main class="pt-28">
 
-    <!-- HERO -->
-    <section
-      id="home"
-      class="min-h-screen flex items-center justify-center text-center px-6"
-    >
-      <div class="max-w-4xl">
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">
-          Kavya Sree Chandhi
-        </h1>
-
-        <h2 class="text-2xl md:text-4xl font-semibold text-blue-300 mb-6">
-          Software Engineer | Python | C++ | AWS | SQL | Generative AI
+    <!-- HOME -->
+    <section id="home" class="min-h-screen flex items-center text-center bg-slate-900">
+      <div class="container mx-auto px-6">
+        <h1 class="text-6xl md:text-7xl font-extrabold text-white mb-4">Kavya Sree Chandhi</h1>
+        <h2 class="text-3xl md:text-4xl font-semibold text-blue-300 mb-6">
+          Software Engineer | Python | AWS | SQL | Generative AI
         </h2>
-
-        <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-10">
-          Software Engineer with 5+ years of experience designing scalable
-          backend applications, automation solutions, and AI-powered systems
-          across healthcare, finance, education, and automotive domains.
+        <p class="max-w-3xl mx-auto text-xl text-slate-200 mb-10 leading-relaxed">
+          Software Engineer with <span class="font-semibold text-white">5+ years</span>
+          of experience developing scalable backend applications, automation solutions,
+          and AI-powered systems using
+          <span class="font-semibold text-white">Python, C++, SQL, and AWS</span>.
+          Experienced in backend development, REST APIs, cloud technologies, and
+          Generative AI, with a strong focus on building reliable, high-performance
+          software solutions.
         </p>
-
         <div class="flex flex-wrap justify-center gap-4">
-          <a
-            href="mailto:chandhikavyasree@gmail.com"
-            class="bg-white text-slate-900 px-6 py-3 rounded-full font-semibold hover:bg-slate-100"
-          >
-            📧 Email
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/chandhi-kavya-sree/"
-            target="_blank"
-            class="bg-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-700"
-          >
-            LinkedIn
-          </a>
-
-          <a
-            href="https://github.com/kavya-sree-chandhi"
-            target="_blank"
-            class="bg-slate-700 px-6 py-3 rounded-full font-semibold hover:bg-slate-600"
-          >
-            GitHub
-          </a>
-
-          <a
-            href="Python_Kavya.pdf"
-            download
-            class="bg-emerald-600 px-6 py-3 rounded-full font-semibold hover:bg-emerald-700"
-          >
-            Download Resume
-          </a>
+          <a href="mailto:chandhikavyasree@gmail.com" class="bg-white text-indigo-700 px-6 py-3 rounded-full text-lg font-bold">📧 Gmail</a>
+          <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="bg-white text-indigo-700 px-6 py-3 rounded-full text-lg font-bold">🔗 LinkedIn</a>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="bg-white text-indigo-700 px-6 py-3 rounded-full text-lg font-bold">🐙 GitHub</a>
+          <a href="KavyaSreeChandhiResume.pdf" download class="bg-white text-blue-700 px-6 py-3 rounded-full text-lg font-bold">📄 Resume</a>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="py-24 bg-white text-slate-900">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-10 text-blue-900">
-          About Me
-        </h2>
-
+      <div class="container mx-auto px-6 max-w-5xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-blue-900">About Me</h2>
         <p class="text-lg leading-relaxed text-slate-700">
-          Software Engineer with <strong>5+ years of experience</strong>
-          developing backend systems, automation solutions, and AI-powered
-          applications using <strong>Python, C++, SQL, and AWS</strong>.
-          Strong foundation in data structures, algorithms, object-oriented
-          programming, memory management, multithreading, and system design.
-          <br><br>
-
-          Experienced in building REST APIs, cloud-native applications,
-          data processing pipelines, and Generative AI solutions using
-          LangChain, LangGraph, OpenAI, Hugging Face, and vector databases.
-          <br><br>
-
-          Delivered impactful solutions for healthcare, finance,
-          education, and automotive organizations including
-          Intermountain Health, DXC Technology, and Pelican IT Solutions.
+          Software Engineer with 5+ years of experience building scalable backend systems,
+          automation solutions, and AI-powered applications using Python, SQL, AWS, and Generative AI.
+          Experienced in healthcare, education, finance, and enterprise domains.
         </p>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="py-24 bg-slate-900">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold text-center mb-16">
-          Professional Experience
-        </h2>
+    <section id="experience" class="py-20 md:py-28 bg-slate-900 text-white">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-5xl font-extrabold text-center mb-16 text-white">Professional Experience</h2>
+        <div class="relative border-l-4 border-white-500 pl-8 space-y-12">
 
-        <div class="space-y-8">
-
-          <div class="experience-card bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-            <h3 class="text-2xl font-bold mb-2">
-              Software Engineer – Global IT Link Solutions (Client: Intermountain Health)
-            </h3>
-            <p class="text-blue-700 font-semibold mb-4">
-              Aug 2024 – Jan 2026 | United States
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-slate-700">
-              <li>Developed scalable backend applications using Python, C++, SQL, and AWS.</li>
-              <li>Built REST APIs and data processing workflows for healthcare applications.</li>
-              <li>Automated operational tasks using Python scripts.</li>
-              <li>Implemented CI/CD pipelines using GitHub Actions, Docker, and AWS.</li>
-              <li>Optimized application performance and resolved production issues.</li>
+          <!-- Intermountain Health -->
+          <div class="bg-white rounded-xl p-8 shadow-lg">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="assets/images/intermountain.png" alt="Intermountain Health Logo" class="w-10 h-10 object-contain">
+              <h3 class="text-2xl font-bold text-slate-900">Software Engineering Intern – Intermountain Health</h3>
+            </div>
+            <p class="text-blue-700 font-semibold">May 2025 – Aug 2025 | Salt Lake City, Utah, USA</p>
+            <ul class="list-disc list-inside text-lg space-y-2 text-slate-800">
+              <li>Developed Python automation scripts to streamline healthcare data processing and reduce manual reporting effort by <strong>40%</strong>.</li>
+              <li>Built and optimized SQL queries and stored procedures to extract, transform, and validate clinical and operational datasets.</li>
+              <li>Designed REST API integrations to connect internal applications with healthcare systems.</li>
+              <li>Created interactive dashboards and reports in Power BI to monitor KPIs and patient-care metrics.</li>
+              <li>Implemented automated data quality checks to improve accuracy and consistency across enterprise datasets.</li>
+              <li>Collaborated with software engineers, analysts, and healthcare stakeholders in Agile sprints.</li>
+              <li>Used Git, Jira, and CI/CD pipelines to manage code changes, testing, and deployment.</li>
+              <li>Supported debugging and production issue resolution to ensure reliable system performance.</li>
             </ul>
           </div>
 
-          <div class="experience-card bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-            <h3 class="text-2xl font-bold mb-2">
-              Associate Professional Software Engineer – DXC Technology
-            </h3>
-            <p class="text-blue-700 font-semibold mb-4">
-              Aug 2022 – Aug 2023 | Bengaluru, India
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-slate-700">
-              <li>Developed Python automation scripts reducing manual effort by 30%.</li>
-              <li>Built user management modules supporting 5,000+ accounts.</li>
-              <li>Optimized SQL reporting pipelines.</li>
-              <li>Integrated predictive maintenance ML models reducing downtime by 15%.</li>
-              <li>Created Tableau and Grafana dashboards.</li>
+          <!-- DXC Technology -->
+          <div class="bg-white rounded-xl p-8 shadow-lg">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="assets/images/dxc.png" alt="DXC Technology Logo" class="w-10 h-10 object-contain">
+              <h3 class="text-2xl font-bold text-slate-900">Associate Professional Software Engineer – DXC Technology</h3>
+            </div>
+            <p class="text-blue-700 font-semibold">Aug 2022 – Aug 2023 | Bengaluru, India</p>
+            <ul class="list-disc list-inside text-lg space-y-2 text-slate-800">
+              <li>Automated PLM workflows with Python, reducing manual effort by 30%.</li>
+              <li>Integrated predictive maintenance ML models, lowering system downtime by 15%.</li>
+              <li>Built dashboards using Tableau and Grafana.</li>
+              <li>Implemented CI/CD pipelines with Docker and Jenkins.</li>
             </ul>
           </div>
 
-          <div class="experience-card bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-            <h3 class="text-2xl font-bold mb-2">
-              Data Analyst – Pelican IT Solutions
-            </h3>
-            <p class="text-blue-700 font-semibold mb-4">
-              Feb 2020 – Jul 2022 | Hyderabad, India
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-slate-700">
-              <li>Built fraud detection models improving accuracy by 20%.</li>
-              <li>Automated ETL pipelines reducing manual effort by 30%.</li>
-              <li>Designed real-time dashboards using Flask and Grafana.</li>
-              <li>Developed fraud risk indicators and analytics workflows.</li>
+          <!-- Pelican IT Solutions -->
+          <div class="bg-white rounded-xl p-8 shadow-lg">
+            <div class="flex items-center gap-3 mb-2">
+              <img src="assets/images/pelican.png" alt="Pelican IT Solutions Logo" class="w-10 h-10 object-contain">
+              <h3 class="text-2xl font-bold text-slate-900">Data Analyst – Pelican IT Solutions</h3>
+            </div>
+            <p class="text-blue-700 font-semibold">Feb 2020 – Jul 2022 | Hyderabad, India</p>
+            <ul class="list-disc list-inside text-lg space-y-2 text-slate-800">
+              <li>Built fraud detection models improving detection accuracy by 20%.</li>
+              <li>Automated ETL pipelines using Python and SQL.</li>
+              <li>Designed real-time monitoring dashboards.</li>
             </ul>
           </div>
-
         </div>
       </div>
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="py-24 bg-white text-slate-900">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold text-center mb-16 text-blue-900">
-          Technical Skills
-        </h2>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          <div class="skill-card bg-slate-100 rounded-xl p-6">
-            <h3 class="font-bold text-xl mb-3">Programming</h3>
-            <p>Python, C, C++, JavaScript, SQL</p>
-          </div>
-
-          <div class="skill-card bg-slate-100 rounded-xl p-6">
-            <h3 class="font-bold text-xl mb-3">Backend Development</h3>
-            <p>FastAPI, Flask, REST APIs, System Design</p>
-          </div>
-
-          <div class="skill-card bg-slate-100 rounded-xl p-6">
-            <h3 class="font-bold text-xl mb-3">Cloud Platforms</h3>
-            <p>AWS, Azure, GCP</p>
-          </div>
-
-          <div class="skill-card bg-slate-100 rounded-xl p-6">
-            <h3 class="font-bold text-xl mb-3">Generative AI</h3>
-            <p>LLMs, RAG, LangChain, LangGraph, OpenAI API</p>
-          </div>
-
-          <div class="skill-card bg-slate-100 rounded-xl p-6">
-            <h3 class="font-bold text-xl mb-3">DevOps</h3>
-            <p>Docker, Kubernetes, Jenkins, GitHub Actions</p>
-          </div>
-
-          <div class="skill-card bg-slate-100 rounded-xl p-6">
-            <h3 class="font-bold text-xl mb-3">Databases</h3>
-            <p>PostgreSQL, MySQL, MongoDB, DynamoDB</p>
-          </div>
-
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-blue-900">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-lg">
+          <div class="bg-slate-900 text-white rounded-xl p-6"><h3 class="font-bold mb-2">Programming</h3><p>Python, C++, SQL, JavaScript</p></div>
+          <div class="bg-slate-900 text-white rounded-xl p-6"><h3 class="font-bold mb-2">Cloud</h3><p>AWS, Azure, GCP</p></div>
+          <div class="bg-slate-900 text-white rounded-xl p-6"><h3 class="font-bold mb-2">AI/ML</h3><p>LLMs, RAG, LangChain, Scikit-learn, TensorFlow</p></div>
+          <div class="bg-slate-900 text-white rounded-xl p-6"><h3 class="font-bold mb-2">Backend</h3><p>FastAPI, Flask, REST APIs</p></div>
+          <div class="bg-slate-900 text-white rounded-xl p-6"><h3 class="font-bold mb-2">DevOps</h3><p>Docker, Kubernetes, Jenkins, GitHub Actions</p></div>
+          <div class="bg-slate-900 text-white rounded-xl p-6"><h3 class="font-bold mb-2">Visualization</h3><p>Power BI, Tableau, Grafana</p></div>
         </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="py-24 bg-slate-900">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold text-center mb-16">
-          Academic Projects
-        </h2>
-
-        <div class="grid md:grid-cols-2 gap-8">
-
-          <div class="project-card bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-            <h3 class="text-2xl font-bold mb-3">
-              AI Research Agent for Healthcare Diagnostics
-            </h3>
-            <p class="text-slate-700">
-              Built an AI-powered research assistant using Python, Streamlit,
-              LangChain, LLaMA3, and FAISS to generate citation-based healthcare reports.
-            </p>
+    <section id="projects" class="py-24 bg-slate-900 text-white">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-5xl font-extrabold text-center mb-14">Academic Projects</h2>
+        <div class="space-y-8">
+          <div class="bg-white text-slate-900 rounded-xl p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-blue-700 mb-2">AI Research Agent for Healthcare Diagnostics</h3>
+            <p>Python, Streamlit, LangChain, FAISS, LLaMA3.</p>
           </div>
-
-          <div class="project-card bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-            <h3 class="text-2xl font-bold mb-3">
-              Image Classification for Disease Detection
-            </h3>
-            <p class="text-slate-700">
-              Developed CNN, VGG16, and ResNet50 models achieving 98% accuracy
-              in brain tumor detection.
-            </p>
+          <div class="bg-white text-slate-900 rounded-xl p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-blue-700 mb-2">Career Navigation AI</h3>
+            <p>Generative AI platform for personalized learning paths.</p>
           </div>
-
-          <div class="project-card bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-            <h3 class="text-2xl font-bold mb-3">
-              Youth Smoking and Drug Use Analysis
-            </h3>
-            <p class="text-slate-700">
-              Conducted EDA and ML modeling on 8,993 records to identify factors
-              influencing substance use.
-            </p>
-          </div>
-
-          <div class="project-card bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-            <h3 class="text-2xl font-bold mb-3">
-              Securing Data Using Blockchain and AI
-            </h3>
-            <p class="text-slate-700">
-              Built a Django prototype combining blockchain and AI anomaly
-              detection for secure healthcare records.
-            </p>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- CERTIFICATIONS -->
-    <section id="certifications" class="py-24 bg-white text-slate-900">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold text-center mb-12 text-blue-900">
-          Certifications
-        </h2>
-
-        <div class="grid md:grid-cols-3 gap-8 text-center">
-
-          <div class="bg-slate-100 rounded-xl p-6 shadow">
-            <h3 class="font-bold text-lg text-blue-700">
-              Microsoft Azure Fundamentals (AZ-900)
-            </h3>
-          </div>
-
-          <div class="bg-slate-100 rounded-xl p-6 shadow">
-            <h3 class="font-bold text-lg text-blue-700">
-              Artificial Intelligence Fundamentals – IBM
-            </h3>
-          </div>
-
-          <div class="bg-slate-100 rounded-xl p-6 shadow">
-            <h3 class="font-bold text-lg text-blue-700">
-              Google IT Support Fundamentals
-            </h3>
-          </div>
-
-        </div>
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="py-24 bg-white text-slate-900">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-blue-900">Certificates</h2>
+        <ul class="max-w-3xl mx-auto text-lg space-y-3 list-disc list-inside">
+          <li>AWS Certified Cloud Practitioner</li>
+          <li>Microsoft Azure Fundamentals (AZ-900)</li>
+          <li>OCI Generative AI Professional</li>
+          <li>Google IT Support Fundamentals</li>
+        </ul>
       </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="py-24 bg-slate-900">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold text-center mb-12">
-          Education
-        </h2>
-
-        <div class="bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-          <h3 class="text-2xl font-bold mb-2">
-            Master of Science in Computer Science
-          </h3>
-          <p class="text-blue-700 font-semibold mb-2">
-            University of North Texas | GPA: 3.916 / 4.0
-          </p>
-          <p class="text-slate-600">
-            Aug 2023 – May 2025 | Denton, Texas
-          </p>
+    <!-- ACADEMICS -->
+    <section id="academics" class="py-24 bg-slate-900 text-white">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-5xl font-extrabold text-center mb-16">Academics</h2>
+        <div class="bg-white text-slate-900 rounded-xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold">Master of Science in Computer Science</h3>
+          <p class="text-blue-700 font-semibold">University of North Texas | GPA: 3.916/4.0</p>
         </div>
       </div>
     </section>
 
     <!-- VOLUNTEERING -->
     <section id="volunteering" class="py-24 bg-white text-slate-900">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold text-center mb-12 text-blue-900">
-          Volunteering
-        </h2>
-
-        <div class="bg-slate-100 rounded-2xl p-8 shadow">
-          <h3 class="text-2xl font-bold mb-2">
-            Software Engineer (Volunteer) – NTARI
-          </h3>
-          <p class="text-blue-700 font-semibold mb-4">
-            Jun 2025 – Aug 2025
-          </p>
-          <p class="text-slate-700">
-            Contributed to frontend development, backend system analysis,
-            performance optimization, and Agile-based feature delivery.
-          </p>
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-blue-900">Volunteering Experience</h2>
+        <div class="bg-slate-100 rounded-xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold">Frontend Developer (Volunteer) – NTARI</h3>
+          <p>Built responsive UIs and reusable components for LogicLingo.</p>
         </div>
       </div>
     </section>
 
-    <!-- LEADERSHIP -->
-    <section id="leadership" class="py-24 bg-slate-900">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-5xl font-extrabold text-center mb-12">
-          Leadership & NGO Work
-        </h2>
-
-        <div class="bg-white text-slate-900 rounded-2xl p-8 shadow-lg">
-          <h3 class="text-2xl font-bold mb-2">
-            Associate President – Street Cause SWEC
-          </h3>
-          <p class="text-blue-700 font-semibold mb-4">
-            Jul 2020 – Jul 2021
-          </p>
-          <p class="text-slate-700">
-            Led community outreach initiatives, COVID-19 mask drives,
-            and slum adoption projects supporting 262+ families.
-          </p>
-        </div>
+    <!-- NGO -->
+    <section id="ngo" class="py-24 bg-slate-900 text-white">
+      <div class="container mx-auto px-6 max-w-6xl">
+        <h2 class="text-5xl font-extrabold text-center mb-6">NGO & Leadership</h2>
+        <p class="text-center text-lg">Associate President, Street Cause SWEC (2020–2021)</p>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-white text-slate-900">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-5xl font-extrabold mb-8 text-blue-900">
-          Contact Me
-        </h2>
-
-        <p class="text-lg text-slate-700 mb-10">
-          Open to Software Engineering, Backend Development,
-          Python Development, and AI Engineering opportunities.
-        </p>
-
+    <section id="contact" class="py-20 md:py-24 bg-white text-slate-900">
+      <div class="container mx-auto px-6 max-w-4xl text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 text-blue-700">Contact Me</h2>
         <div class="flex flex-wrap justify-center gap-4">
-          <a
-            href="mailto:chandhikavyasree@gmail.com"
-            class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700"
-          >
-            Email
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/chandhi-kavya-sree/"
-            target="_blank"
-            class="bg-slate-800 text-white px-6 py-3 rounded-full font-semibold hover:bg-slate-700"
-          >
-            LinkedIn
-          </a>
-
-          <a
-            href="https://github.com/kavya-sree-chandhi"
-            target="_blank"
-            class="bg-slate-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-slate-600"
-          >
-            GitHub
-          </a>
-        </div>
-
-        <div class="mt-8 text-slate-600">
-          <p>📞 +1 (940) 629-8898</p>
-          <p>📍 Herriman, Utah, USA</p>
+          <a href="mailto:chandhikavyasree@gmail.com" class="bg-white text-indigo-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full">📧 Gmail</a>
+          <a href="https://www.linkedin.com/in/chandhi-kavya-sree/" target="_blank" class="bg-white text-indigo-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full">🔗 LinkedIn</a>
+          <a href="https://github.com/kavya-sree-chandhi" target="_blank" class="bg-white text-indigo-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full">🐙 GitHub</a>
+          <div class="bg-white text-indigo-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full">📞 +1 940-629-8898</div>
+          <div class="bg-white text-indigo-700 border border-blue-600 font-semibold py-2.5 px-5 rounded-full">📍 Herriman, Utah, USA</div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
-  <footer class="bg-slate-950 py-6 text-center text-slate-400">
-    <p>© 2026 Kavya Sree Chandhi. All rights reserved.</p>
+  <footer class="bg-slate-900 text-amber-100 py-6">
+    <div class="container mx-auto px-6 text-center">
+      <p>© 2026 Kavya Sree Chandhi. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- ACTIVE NAV SCRIPT -->
   <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
+    document.addEventListener('DOMContentLoaded', () => {
+      const header = document.getElementById('header');
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) header.classList.add('shadow-md');
+        else header.classList.remove('shadow-md');
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
-            navLinks.forEach((link) => {
-              link.classList.remove("active");
-              if (
-                link.getAttribute("href").substring(1) === entry.target.id
-              ) {
-                link.classList.add("active");
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href').substring(1) === entry.target.id) {
+                link.classList.add('active');
               }
             });
           }
         });
-      },
-      {
-        threshold: 0.4,
-      }
-    );
+      }, { threshold: 0.45 });
 
-    sections.forEach((section) => observer.observe(section));
+      sections.forEach(section => observer.observe(section));
+    });
   </script>
 </body>
 </html>
